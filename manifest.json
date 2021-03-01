@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/authentication.html",
-          "hash": "3+LZAT0l7nQL4uKJP4ToPw=="
+          "hash": "LrhSjv1+8HIbDC3bgZdFXg=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connecting.html",
-          "hash": "OFzQWDFWqCvkvhzqK2PnGA=="
+          "hash": "1StE/oKtSd6DOhsQvtmG6g=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/index.html",
-          "hash": "C4iqj9AgERVmTt0xhRsKRg=="
+          "hash": "jOpkkxNXtYOtVFAl8vFGFA=="
         }
       },
       "is_incremental": false,
@@ -835,6 +835,18 @@
         ".html": {
           "relative_path": "cmdlets/Add-PnPSiteScript.html",
           "hash": "YNM68GP34BvmRErEYVoUQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPSiteScriptPackage.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPSiteScriptPackage.html",
+          "hash": "9byNLUdO98WCysFhaTPwJg=="
         }
       },
       "is_incremental": false,
@@ -1790,6 +1802,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPAzureADAppSitePermission.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPAzureADAppSitePermission.html",
+          "hash": "ZlFO3YNR7Zabk0KjITfpcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPAzureCertificate.md",
       "output": {
         ".html": {
@@ -2438,11 +2462,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupMember.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupMember.html",
+          "hash": "IiQs8QclMUCQTbWQYafRvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupMembers.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPMicrosoft365GroupMembers.html",
           "hash": "Zy8m9w611juqrKPadLiIUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupOwner.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupOwner.html",
+          "hash": "/mPPnapeMiw6Fd94WrYREg=="
         }
       },
       "is_incremental": false,
@@ -3018,7 +3066,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPStructuralNavigationCacheSiteState.html",
-          "hash": "j70Cl44DM6D4V6BAAEtZgQ=="
+          "hash": "jTFhU/igGnC2hqVso6MNUQ=="
         }
       },
       "is_incremental": false,
@@ -3030,7 +3078,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPStructuralNavigationCacheWebState.html",
-          "hash": "bsGvfpN+eTexrrHy2C9zYA=="
+          "hash": "zBVceZfn62iOG9nTIe3F9g=="
         }
       },
       "is_incremental": false,
@@ -3055,6 +3103,18 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPSubWebs.html",
           "hash": "e5WWygZatuGp8Qipi0C05Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPSubscribeSharePointNewsDigest.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPSubscribeSharePointNewsDigest.html",
+          "hash": "2U4WD06bVYjol9lSbiGRvA=="
         }
       },
       "is_incremental": false,
@@ -3151,6 +3211,18 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPTeamsUser.html",
           "hash": "PmATQfdiNFBnnxhsXHQ0CQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTemporarilyDisableAppBar.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTemporarilyDisableAppBar.html",
+          "hash": "Q/t9yPCF9bF5BDCAXbposA=="
         }
       },
       "is_incremental": false,
@@ -3607,6 +3679,18 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPWikiPageContent.html",
           "hash": "v98jDF7nnLeNRIqGEWJjog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Grant-PnPAzureADAppSitePermission.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Grant-PnPAzureADAppSitePermission.html",
+          "hash": "UX58zWYY3Zto7bufKYuaGw=="
         }
       },
       "is_incremental": false,
@@ -4410,7 +4494,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Register-PnPAzureADApp.html",
-          "hash": "G1ImMJ2VOAnpFZ2H4yKrIw=="
+          "hash": "5jjLzJvHRKaR4pMnl1PzGQ=="
         }
       },
       "is_incremental": false,
@@ -4471,6 +4555,18 @@
         ".html": {
           "relative_path": "cmdlets/Remove-PnPApplicationCustomizer.html",
           "hash": "37xhpJaT0yV3dpVODuVUbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPAzureADAppSitePermission.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPAzureADAppSitePermission.html",
+          "hash": "t/KZVpeH6rihR7YHJCmAAQ=="
         }
       },
       "is_incremental": false,
@@ -5610,7 +5706,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Restore-PnPRecycleBinItem.html",
-          "hash": "R/3CWfoLLm0tzvYlUOO0cg=="
+          "hash": "y2hgZHlutH0Ru+MISF5IdA=="
         }
       },
       "is_incremental": false,
@@ -5803,6 +5899,18 @@
         ".html": {
           "relative_path": "cmdlets/Set-PnPAvailablePageLayouts.html",
           "hash": "UToIPEcpPvmjoj8YA1lTGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPAzureADAppSitePermission.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPAzureADAppSitePermission.html",
+          "hash": "LKzM6zXraCSAoVhHUP5vJA=="
         }
       },
       "is_incremental": false,
@@ -6458,6 +6566,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPSiteScriptPackage.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPSiteScriptPackage.html",
+          "hash": "62SBSgyk6hhFKL0PY9vmZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPSiteTemplateMetadata.md",
       "output": {
         ".html": {
@@ -6486,7 +6606,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPStructuralNavigationCacheSiteState.html",
-          "hash": "3e77Tawe984BTbkYtSCfGw=="
+          "hash": "h1A0lkaVXMIj2Gvpc8wXZQ=="
         }
       },
       "is_incremental": false,
@@ -6498,7 +6618,19 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPStructuralNavigationCacheWebState.html",
-          "hash": "2sfzVovuLWF1p2sKPhFb8A=="
+          "hash": "45eVssSueD9ojS7KDCHJfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPSubscribeSharePointNewsDigest.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPSubscribeSharePointNewsDigest.html",
+          "hash": "J+zp1hkPR9WmTXtRc9Whww=="
         }
       },
       "is_incremental": false,
@@ -6583,6 +6715,18 @@
         ".html": {
           "relative_path": "cmdlets/Set-PnPTeamsTeamPicture.html",
           "hash": "qD2otDASuxjDx1b/+bQBZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPTemporarilyDisableAppBar.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPTemporarilyDisableAppBar.html",
+          "hash": "CqebCCSaQAHftf4l83dCKw=="
         }
       },
       "is_incremental": false,
@@ -7026,7 +7170,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "6Nzt4qxSlmToBgs7gHziwA=="
+          "hash": "r6PkDaLXD7h38at4N803JA=="
         }
       },
       "is_incremental": false,
@@ -7105,7 +7249,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 585,
+          "total_file_count": 597,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
