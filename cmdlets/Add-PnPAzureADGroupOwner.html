@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Register-PnPManagementShellAccess | PnP PowerShell </title>
+    <title>Add-PnPAzureADGroupOwner | PnP PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Register-PnPManagementShellAccess | PnP PowerShell ">
+    <meta name="title" content="Add-PnPAzureADGroupOwner | PnP PowerShell ">
     <meta name="generator" content="docfx 2.51.0.0">
     <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -81,65 +81,64 @@
                   <div class="contribution-panel mobile-hide pull-right">
                       <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-                    <h1 id="register-pnpmanagementshellaccess">Register-PnPManagementShellAccess</h1>
+                    <h1 id="add-pnpazureadgroupowner">Add-PnPAzureADGroupOwner</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>Registers access to the tenant for the PnP Management Shell Multi-Tenant Azure AD Application</p>
+<p><strong>Required Permissions</strong></p>
+<ul>
+<li>Microsoft Graph API: All of Group.ReadWrite.All, User.ReadWrite.All</li>
+</ul>
+<p>Adds users to the owners of an Azure Active Directory group. This can be a security, distribution or Microsoft 365 group.</p>
 <h2 id="syntax">SYNTAX</h2>
-<h3 id="main">Main</h3>
-<pre><code class="lang-powershell">Register-PnPManagementShellAccess [-AzureEnvironment &lt;AzureEnvironment&gt;] [&lt;CommonParameters&gt;]
-</code></pre>
-<h3 id="show-consent-url">Show Consent Url</h3>
-<pre><code class="lang-powershell">Register-PnPManagementShellAccess -ShowConsentUrl [-AzureEnvironment]
+<pre><code class="lang-powershell">Add-PnPAzureADGroupOwner -Identity &lt;AzureADGroupPipeBind&gt; -Users &lt;String[]&gt; [-RemoveExisting] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>This cmdlet grants access to the tenant for the PnP Management Shell Multi-Tenant Azure AD Application which simplifies the use of OAuth based access for PnP PowerShell when using credentials to authenticate. If you are not an administrator that can consent Azure AD Applications, use the -ShowConsentUrl option. It will ask you to log in and provides you with an URL you can share with a person with appropriate access rights to provide consent for the organization.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Register-PnPManagementShellAccess
+<pre><code class="lang-powershell">Add-PnPAzureADGroupOwner -Identity &quot;Project Team&quot; -Users &quot;john@contoso.onmicrosoft.com&quot;,&quot;jane@contoso.onmicrosoft.com&quot;
 </code></pre>
+<p>Adds the provided two users as additional owners to the Azure Active Directory group named &quot;Project Team&quot;</p>
 <h3 id="example-2">EXAMPLE 2</h3>
-<pre><code class="lang-powershell">Register-PnPManagementShellAccess -ShowConsentUrl
+<pre><code class="lang-powershell">Add-PnPAzureADGroupOwner -Identity &quot;Project Team&quot; -Users &quot;john@contoso.onmicrosoft.com&quot;,&quot;jane@contoso.onmicrosoft.com&quot; -RemoveExisting
 </code></pre>
-<p>Launches the consent flow to grant the PnP Management Shell Azure AD Application delegate access to the tenant and also displays the consent URL which can be shared with Azure AD administrators or Global administrators.</p>
-<h3 id="example-3">EXAMPLE 3</h3>
-<pre><code class="lang-powershell">Register-PnPManagementShellAccess -ShowConsentUrl -TenantName yourtenant.onmicrosoft.com
-</code></pre>
-<p>Displays the consent URL which can be shared with Azure AD administrators or Global administrators.</p>
+<p>Sets the provided two users as the only owners of the Azure Active Directory group named &quot;Project Team&quot; by removing any current existing members first</p>
 <h2 id="parameters">PARAMETERS</h2>
-<h3 id="-showconsenturl">-ShowConsentUrl</h3>
-<p>If specified you will be asked to authenticate to acquire the tenant id. An url that can be used to provide consent will be returned.</p>
-<pre><code class="lang-yaml">Type: SwitchParameter
-Parameter Sets: Show Consent Url
-
-Required: False
-Position: Named
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-azureenvironment">-AzureEnvironment</h3>
-<p>The Azure environment to use for authentication, the defaults to 'Production' which is the main Azure environment.</p>
-<pre><code class="lang-yaml">Type: AzureEnvironment
+<h3 id="-identity">-Identity</h3>
+<p>The Identity of the Azure Active Directory group to add owners to</p>
+<pre><code class="lang-yaml">Type: AzureADGroupPipeBind
 Parameter Sets: (All)
-Accepted values: Production, PPE, China, Germany, USGovernment
-Required: False
+
+Required: True
 Position: Named
-Default value: Production
-Accept pipeline input: False
+Default value: None
+Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-tenantname">-TenantName</h3>
-<p>The name of the tenant. Example - ( yourtenant.onmicrosoft.com)</p>
+<h3 id="-removeexisting">-RemoveExisting</h3>
+<p>If provided, all existing members will be removed and only those provided through Users will become members</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
-Parameter Sets: Show Consent Url
+Parameter Sets: (All)
 
 Required: False
 Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-users">-Users</h3>
+<p>The UPN(s) of the user(s) to add to the Azure Active Directory group as a member</p>
+<pre><code class="lang-yaml">Type: String[]
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a>
+<a href="https://docs.microsoft.com/graph/api/group-post-members">Documentation</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
