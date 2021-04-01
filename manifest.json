@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connecting.html",
-          "hash": "1StE/oKtSd6DOhsQvtmG6g=="
+          "hash": "fH+QHP7t08vtiTuPyxe6+Q=="
         }
       },
       "is_incremental": false,
@@ -3222,7 +3222,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPSubscribeSharePointNewsDigest.html",
-          "hash": "2U4WD06bVYjol9lSbiGRvA=="
+          "hash": "TVBLDf/vnmmKgGSJvYhn3w=="
         }
       },
       "is_incremental": false,
@@ -4574,11 +4574,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Publish-PnPCompanyApp.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Publish-PnPCompanyApp.html",
+          "hash": "Tsex8fPWob+bR5wGE9W1Gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Publish-PnPSyntexModel.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Publish-PnPSyntexModel.html",
-          "hash": "eCFG/typkVsmn+R1lvqNxA=="
+          "hash": "AEdANVMcFwvKYroqkR5eEw=="
         }
       },
       "is_incremental": false,
@@ -5810,6 +5822,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Request-PnPSyntexClassifyAndExtract.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Request-PnPSyntexClassifyAndExtract.html",
+          "hash": "7ykiMJF6G8v4n5yg45CKzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Reset-PnPFileVersion.md",
       "output": {
         ".html": {
@@ -6846,7 +6870,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPSubscribeSharePointNewsDigest.html",
-          "hash": "J+zp1hkPR9WmTXtRc9Whww=="
+          "hash": "PAjAoNmOKo50mTI55H2K0A=="
         }
       },
       "is_incremental": false,
@@ -7326,7 +7350,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Unpublish-PnPSyntexModel.html",
-          "hash": "I6eHOEdtfRJ382UpCKg+1A=="
+          "hash": "8lmeYbX7hQUmJ0m32EvcSQ=="
         }
       },
       "is_incremental": false,
@@ -7398,7 +7422,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "NULoxe75X7X9Kpst7GJPpg=="
+          "hash": "77Kc89In9l7GFwtINtnPMA=="
         }
       },
       "is_incremental": false,
@@ -7477,7 +7501,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 616,
+          "total_file_count": 618,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Set-PnPSubscribeSharePointNewsDigest | PnP PowerShell </title>
+    <title>Publish-PnPCompanyApp | PnP PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Set-PnPSubscribeSharePointNewsDigest | PnP PowerShell ">
+    <meta name="title" content="Publish-PnPCompanyApp | PnP PowerShell ">
     <meta name="generator" content="docfx 2.51.0.0">
     <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -81,57 +81,161 @@
                   <div class="contribution-panel mobile-hide pull-right">
                       <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-                    <h1 id="set-pnpsubscribesharepointnewsdigest">Set-PnPSubscribeSharePointNewsDigest</h1>
+                    <h1 id="publish-pnpcompanyapp">Publish-PnPCompanyApp</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p><strong>Required Permissions</strong></p>
-<ul>
-<li>SharePoint: Access to the SharePoint Tenant Administration site</li>
-</ul>
-<p>You must connect to the tenant admin website (<a href="https://tenant-admin.sharepoint.com">https://tenant-admin.sharepoint.com</a>) with Connect-PnPOnline in order to use this cmdlet.</p>
-<p>Enables or disables the SharePoint News Digest mails for a particular user. Note that the disabling option is still experimental and may not work and may be removed again in the future.</p>
+<p>This cmdlet publishes a new company app to Microsoft Teams.</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Set-PnPSubscribeSharePointNewsDigest -Account &lt;String&gt; -Enabled &lt;Boolean&gt; [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+<pre><code>Publish-PnPCompanyApp -PortalUrl &lt;String&gt; -AppName &lt;String&gt; [-Description &lt;String&gt;] [-LongDescription &lt;String&gt;]
+ [-PrivacyPolicyUrl &lt;String&gt;] [-TermsAndUsagePolicyUrl &lt;String&gt;] -CompanyName &lt;String&gt;
+ -CompanyWebSiteUrl &lt;String&gt; -ColoredIconPath &lt;String&gt; -OutlineIconPath &lt;String&gt;
+ [-Force] [-NoUpload] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>Requires a connection to a SharePoint Tenant Admin site.</p>
-<p>Enables or disables the SharePoint News Digest mails for a particular user.</p>
+<p>This cmdlet publishes a new company app (Microsoft Viva Connections) to Microsoft Teams. It will create a new package (zip file) in the current folder named after the CompanyApp value specified. E.g. if the name is 'Contoso Portal', the package will be called &quot;Contoso Portal.zip&quot;. This package will be uploaded to the Teams App Catalog. If you do not want to upload the package automatically, e.g. prepare a package ahead of time, specify '-NoUpload'.</p>
 <h2 id="examples">EXAMPLES</h2>
-<h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Set-PnPSubscribeSharePointNewsDigest -Account 'user@domain.com' -Enabled:$true
+<h3 id="example-1">Example 1</h3>
+<pre><code class="lang-powershell">Publish-PnPCompanyApp -PortalUrl https://contoso.sharepoint.com/sites/portal -AppName &quot;Contoso Portal&quot; -CompanyName &quot;Contoso&quot; -CompanyWebSite &quot;https://www.contoso.com&quot; -ColoredIconPath ./coloricon.png -OutlineIconPath ./outlinedicon
 </code></pre>
-<p>Enables the user user@domain.com for receiving the SharePoint News Digest e-mails.</p>
-<h3 id="example-2">EXAMPLE 2</h3>
-<pre><code class="lang-powershell">Set-PnPSubscribeSharePointNewsDigest -Account 'user@domain.com' -Enabled:$false
-</code></pre>
-<p>Stops the user user@domain.com for receiving the SharePoint News Digest e-mails.</p>
+<p>This will create a new zip file called &quot;Contoso Portal.zip&quot; and it will upload this app to the Teams App Catalog.</p>
 <h2 id="parameters">PARAMETERS</h2>
-<h3 id="-account">-Account</h3>
-<p>The account of the user, formatted either as a login name, e.g. user@domain.com, or as a claims identity, e.g. i:0#.f|membership|user@domain.com</p>
+<h3 id="-appname">-AppName</h3>
+<p>The name of the app as you want to it to appear in Teams.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
+Aliases:
 
 Required: True
-Position: 0
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-enabled">-Enabled</h3>
-<p>Boolean indicating if the user should receive the SharePoint News Digest e-mails</p>
-<pre><code class="lang-yaml">Type: Boolean
+<h3 id="-colorediconpath">-ColoredIconPath</h3>
+<p>The path to the color icon (192x192px)</p>
+<pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
+Aliases:
 
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-connection">-Connection</h3>
-<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
-<pre><code class="lang-yaml">Type: PnPConnection
+<h3 id="-companyname">-CompanyName</h3>
+<p>The name of your company/organization.</p>
+<pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-companywebsiteurl">-CompanyWebSiteUrl</h3>
+<p>The link to the public website of your company / organization.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-description">-Description</h3>
+<p>A short description for the app (less than 80 characters)</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-force">-Force</h3>
+<p>This will overwrite an existing zip file if present and no confirmation will be asked.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-longdescription">-LongDescription</h3>
+<p>A longer description for the app (less than 4000 characters)</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-noupload">-NoUpload</h3>
+<p>If specified the app package will not be uploaded to the Teams App Catalog.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-outlineiconpath">-OutlineIconPath</h3>
+<p>The path to the outline icon (32x32 px)</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-portalurl">-PortalUrl</h3>
+<p>The URL to the site you want to use in the app. This has to be a Communication Site.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-privacypolicyurl">-PrivacyPolicyUrl</h3>
+<p>Privacy policy link for the app. If not specified the default privacy policy link from Microsoft will be used.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-termsandusagepolicyurl">-TermsAndUsagePolicyUrl</h3>
+<p>The Terms of Use link for the app. If not specified the default Terms of Use from Microsoft link will be used.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
