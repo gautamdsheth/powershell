@@ -92,7 +92,10 @@
 </code></pre>
 <p>This will launch a device login flow that will ask you to consent to the application. Notice that is only required -once- per tenant. You will need to have appropriate access rights to be able to consent applications in your Azure AD.</p>
 <p>After that you can authenticate using</p>
-<pre><code class="lang-powershell">Connect-PnPOnline -Url &quot;https://[yourtenant].sharepoint.com&quot; -Credentials (Get-Credential)
+<pre><code class="lang-powershell">Connect-PnPOnline -Url https://[yourtenant].sharepoint.com -Credentials (Get-Credential)
+</code></pre>
+<p>or in case the account you would like to use has MFA or any other authentication provider configured for it, instead use:</p>
+<pre><code class="lang-powershell">Connect-PnPOnline -Url https://[yourtenant].sharepoint.com -Interactive
 </code></pre>
 <h3 id="connect-by-using-your-own-azure-ad-application">Connect by using your own Azure AD Application</h3>
 <p>You will have to create your own Azure AD Application registration, or you can create one:</p>
