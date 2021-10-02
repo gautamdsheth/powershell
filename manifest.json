@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/batching.html",
-          "hash": "T3fz/za5APQa1CJlq9KL5g=="
+          "hash": "5KN5tGPZ9UWG9gXg2SSKBg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/buildingsource.html",
-          "hash": "UFFC73HSxrQwintAsxJd+w=="
+          "hash": "45VBN6d5pknM0zK/2bGT/g=="
         }
       },
       "is_incremental": false,
@@ -1602,7 +1602,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Export-PnPFlow.html",
-          "hash": "HDnAkYqVtj0gfMqJqnSxSg=="
+          "hash": "VLWk2WWb79sG69Hh3/wtyA=="
         }
       },
       "is_incremental": false,
@@ -2226,19 +2226,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPFlow.html",
-          "hash": "+qRGTN3R+fSrIFGV+cRNbw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPFlowEnvironment.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPFlowEnvironment.html",
-          "hash": "0JzXWsfH2o00sn28y63X+g=="
+          "hash": "RcEQs5LAaYi1WV0Ncj93Ww=="
         }
       },
       "is_incremental": false,
@@ -2791,6 +2779,18 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPPlannerTask.html",
           "hash": "RuFUNHMEmg1vd9ukpkRqRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPPowerPlatformEnvironment.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPPowerPlatformEnvironment.html",
+          "hash": "KxVig/r79RPVo8LN174I+Q=="
         }
       },
       "is_incremental": false,
@@ -5862,7 +5862,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Request-PnPPersonalSite.html",
-          "hash": "63yZ/fJShD96CTtRKq3wkQ=="
+          "hash": "P3YC1BPNfQzk5zZSJ7HAtg=="
         }
       },
       "is_incremental": false,
@@ -7518,7 +7518,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "qIsN+HWHwfKYj8x3TOHgsQ=="
+          "hash": "lf164AwRXT5nxYcvT1NrqQ=="
         }
       },
       "is_incremental": false,
