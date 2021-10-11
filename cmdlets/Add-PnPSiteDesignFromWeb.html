@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Set-PnPPage | PnP PowerShell </title>
+    <title>Add-PnPSiteDesignFromWeb | PnP PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Set-PnPPage | PnP PowerShell ">
+    <meta name="title" content="Add-PnPSiteDesignFromWeb | PnP PowerShell ">
     <meta name="generator" content="docfx 2.51.0.0">
     <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -81,52 +81,42 @@
                   <div class="contribution-panel mobile-hide pull-right">
                       <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-                    <h1 id="set-pnppage">Set-PnPPage</h1>
+                    <h1 id="add-pnpsitedesignfromweb">Add-PnPSiteDesignFromWeb</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>Sets parameters of a page</p>
+<p><strong>Required Permissions</strong></p>
+<ul>
+<li>SharePoint: Access to the SharePoint Tenant Administration site</li>
+</ul>
+<p>Creates a new Site Design on the current tenant based on the site provided through -Url or the currently connected to site if -Url is omitted</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Set-PnPPage [-Identity] &lt;PagePipeBind&gt; [-Name &lt;String&gt;] [-Title &lt;String&gt;]
- [-LayoutType &lt;PageLayoutType&gt;] [-PromoteAs &lt;PagePromoteType&gt;] [-CommentsEnabled]
- [-Publish] [-HeaderType &lt;PageHeaderType&gt;] [-HeaderLayoutType &lt;PageHeaderLayoutType&gt;] [-ScheduledPublishDate &lt;DateTime&gt;] 
- [-RemoveScheduledPublish] [-ContentType &lt;ContentTypePipeBind&gt;] [-ThumbnailUrl &lt;String&gt;] 
- [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+<pre><code class="lang-powershell">Add-PnPSiteDesignFromWeb -Title &lt;String&gt; [-Description &lt;String&gt;] [-IsDefault]
+ [-PreviewImageAltText &lt;String&gt;] [-PreviewImageUrl &lt;String&gt;] [-WebTemplate &lt;SiteWebTemplate&gt;]
+ [-ThumbnailUrl &lt;String&gt;] [-DesignPackageId &lt;Guid&gt;] [-Lists &lt;String[]&gt;] [-IncludeBranding] [-IncludeLinksToExportedItems]
+ [-IncludeRegionalSettings] [-IncludeSiteExternalSharingCapability] [-IncludeTheme]
+ [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Creates a new Site Design on the current tenant based on the site provided through -Url or the currently connected to site if -Url is omitted. It combines the steps of <code>Get-PnPSiteScriptFromWeb</code>, <code>Add-PnPSiteScript</code> and <code>Add-PnPSiteDesign</code> into one cmdlet. The information returned from running the cmdlet is the information of the Site Design that has been created.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -LayoutType Home -Title &quot;My Page&quot;
+<pre><code class="lang-powershell">Add-PnPSiteDesignFromWeb -Title &quot;My Company Design&quot; -Description &quot;My description&quot; -WebTemplate TeamSite -IncludeAll
 </code></pre>
-<p>Updates the properties of the page named 'MyPage'</p>
+<p>Generates a site script based on all the components of the currently connected to site, excluding its lists and libraries and based on the generated script it will create a site script and a site design with the specified title and description for modern team sites.</p>
 <h3 id="example-2">EXAMPLE 2</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -CommentsEnabled
+<pre><code class="lang-powershell">Add-PnPSiteDesignFromWeb -Title &quot;My Company Design&quot; -Description &quot;My description&quot; -WebTemplate TeamSite -IncludeAll -Lists (&quot;/lists/Issue list&quot;, &quot;Shared Documents)
 </code></pre>
-<p>Enables the comments on the page named 'MyPage'</p>
+<p>Generates a site script based on all the components of the currently connected to site, including the list &quot;Issue list&quot; and the default document library &quot;Shared Documents&quot; and based on the generated script it will create a site script and a site design with the specified title and description for modern team sites.</p>
 <h3 id="example-3">EXAMPLE 3</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -CommentsEnabled:$false
+<pre><code class="lang-powershell">Add-PnPSiteDesignFromWeb -Title &quot;My Company Design&quot; -Description &quot;My description&quot; -WebTemplate TeamSite -Lists &quot;/lists/Issue list&quot; -ThumbnailUrl https://contoso.sharepoint.com/SiteAssets/logo.png
 </code></pre>
-<p>Disables the comments on the page named 'MyPage'</p>
-<h3 id="example-4">EXAMPLE 4</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -HeaderType Default
-</code></pre>
-<p>Sets the header of the page to the default header</p>
-<h3 id="example-5">EXAMPLE 5</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -HeaderType None
-</code></pre>
-<p>Removes the header of the page</p>
-<h3 id="example-6">EXAMPLE 6</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -HeaderType Custom -ServerRelativeImageUrl &quot;/sites/demo1/assets/myimage.png&quot; -TranslateX 10.5 -TranslateY 11.0
-</code></pre>
-<p>Sets the header of the page to custom header, using the specified image and translates the location of the image in the header given the values specified</p>
-<h3 id="example-7">EXAMPLE 7</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -ScheduledPublishDate (Get-Date).AddHours(1)
-</code></pre>
-<p>Schedules the page &quot;MyPage&quot; to be published in one hour from now</p>
+<p>Generates a site script based on the list &quot;Issue list&quot; in the current site and based on the generated script it will create a site script and a site design with the specified title, description and logo for modern team sites.</p>
 <h2 id="parameters">PARAMETERS</h2>
-<h3 id="-commentsenabled">-CommentsEnabled</h3>
-<p>Enables or Disables the comments on the page</p>
+<h3 id="-confirm">-Confirm</h3>
+<p>Prompts you for confirmation before running the cmdlet.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: cf
 
 Required: False
 Position: Named
@@ -145,10 +135,11 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-contenttype">-ContentType</h3>
-<p>Specify either the name, ID or an actual content type.</p>
-<pre><code class="lang-yaml">Type: ContentTypePipeBind
+<h3 id="-whatif">-WhatIf</h3>
+<p>Shows what would happen if the cmdlet runs. The cmdlet is not run.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
+Aliases: wi
 
 Required: False
 Position: Named
@@ -156,55 +147,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-headertype">-HeaderType</h3>
-<p>Sets the page header type</p>
-<pre><code class="lang-yaml">Type: PageHeaderType
-Parameter Sets: (All)
-Accepted values: None, Default, Custom
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-headerlayouttype">-HeaderLayoutType</h3>
-<p>Sets the page header layout type</p>
-<pre><code class="lang-yaml">Type: PageHeaderLayoutType
-Parameter Sets: (All)
-Accepted values: None, Default, Custom
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-identity">-Identity</h3>
-<p>The name/identity of the page</p>
-<pre><code class="lang-yaml">Type: PagePipeBind
-Parameter Sets: (All)
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: True (ByValue)
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-layouttype">-LayoutType</h3>
-<p>Sets the layout type of the page. (Default = Article)</p>
-<pre><code class="lang-yaml">Type: PageLayoutType
-Parameter Sets: (All)
-Accepted values: Article, Home, SingleWebPartAppPage, RepostPage, HeaderlessSearchResults, Spaces, Topic
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-name">-Name</h3>
-<p>Sets the name of the page.</p>
+<h3 id="-description">-Description</h3>
+<p>The description of the site design</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 
@@ -214,20 +158,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-promoteas">-PromoteAs</h3>
-<p>Allows to promote the page for a specific purpose (None | HomePage | NewsArticle | Template)</p>
-<pre><code class="lang-yaml">Type: PagePromoteType
-Parameter Sets: (All)
-Accepted values: None, HomePage, NewsArticle, Template
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-publish">-Publish</h3>
-<p>Publishes the page once it is saved.</p>
+<h3 id="-isdefault">-IsDefault</h3>
+<p>Specifies if the site design is a default site design</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
 
@@ -237,8 +169,19 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-thumbnailurl">-ThumbnailUrl</h3>
-<p>Thumbnail Url</p>
+<h3 id="-previewimagealttext">-PreviewImageAltText</h3>
+<p>Sets the text for the preview image. This was used in the old site designs approach and currently has no function anymore.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-previewimageurl">-PreviewImageUrl</h3>
+<p>Sets the url to the preview image. This was used in the old site designs approach and currently has no function anymore. Use ThumbnailUrl instead.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 
@@ -249,20 +192,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-title">-Title</h3>
-<p>Sets the title of the page.</p>
+<p>The title of the site design</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-scheduledpublishdate">-ScheduledPublishDate</h3>
-<p>If provided, the page will be scheduled to be published on the provided date and time. It will enable page scheduling on the Site Pages library if not already enabled. If not provided, the publishing of the page will not be scheduled.</p>
-<pre><code class="lang-yaml">Type: DateTime
+<h3 id="-webtemplate">-WebTemplate</h3>
+<p>Specifies the type of site to which this design applies</p>
+<pre><code class="lang-yaml">Type: SiteWebTemplate
 Parameter Sets: (All)
+Accepted values: TeamSite, CommunicationSite, GrouplessTeamSite
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-thumbnailurl">-ThumbnailUrl</h3>
+<p>The full URL of a thumbnail image, i.e. <a href="https://contoso.sharepoint/siteassets/image.png">https://contoso.sharepoint/siteassets/image.png</a>. If none is specified, SharePoint uses a generic image. Recommended size is 400 x 300 pixels. This is the image that will be shown when selecting a template through &quot;Apply a site template&quot; or &quot;Browse templates&quot; shown in &quot;Start designing your site&quot; shown when creating a new site.</p>
+<pre><code class="lang-yaml">Type: SiteWebTemplate
+Parameter Sets: (All)
+Accepted values: TeamSite, CommunicationSite
 
 Required: False
 Position: Named
@@ -270,9 +226,87 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-removescheduledpublish">-RemoveScheduledPublish</h3>
-<p>If provided, the page publish schedule will be removed, if it has been set.</p>
-<pre><code class="lang-yaml">Type: DateTime
+<h3 id="-designpackageid">-DesignPackageId</h3>
+<p>Sets the design package Id of this site design</p>
+<pre><code class="lang-yaml">Type: SiteWebTemplate
+Parameter Sets: (All)
+Accepted values: TeamSite, CommunicationSite
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-includeall">-IncludeAll</h3>
+<p>If specified will include all supported components into the Site Script except for the lists and document libraries, these need to be explicitly be specified through -Lists</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: All components
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-includebranding">-IncludeBranding</h3>
+<p>If specified will include the branding of the site into the Site Script</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Specific components
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-includelinkstoexporteditems">-IncludeLinksToExportedItems</h3>
+<p>If specified will include navigation links into the Site Script</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Specific components
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-includeregionalsettings">-IncludeRegionalSettings</h3>
+<p>If specified will include the regional settings into the Site Script</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Specific components
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-includesiteexternalsharingcapability">-IncludeSiteExternalSharingCapability</h3>
+<p>If specified will include the external sharing configuration into the Site Script</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Specific components
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-includetheme">-IncludeTheme</h3>
+<p>If specified will include the branding of the site into the Site Script</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Specific components
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-lists">-Lists</h3>
+<p>Allows specifying one or more site relative URLs of lists that should be included into the Site Script, i.e. &quot;Shared Documents&quot;,&quot;List\MyList&quot;</p>
+<pre><code class="lang-yaml">Type: String[]
 Parameter Sets: (All)
 
 Required: False

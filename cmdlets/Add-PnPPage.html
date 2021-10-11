@@ -88,7 +88,7 @@
 <h2 id="syntax">SYNTAX</h2>
 <pre><code class="lang-powershell">Add-PnPPage [-Name] &lt;String&gt; [-LayoutType &lt;PageLayoutType&gt;]
  [-PromoteAs &lt;PagePromoteType&gt;] [-ContentType &lt;ContentTypePipeBind&gt;] [-CommentsEnabled] [-Publish]
- [-HeaderLayoutType &lt;PageHeaderLayoutType&gt;] [-Connection &lt;PnPConnection&gt;]
+ [-HeaderLayoutType &lt;PageHeaderLayoutType&gt;] [-ScheduledPublishDate &lt;DateTime&gt;] [-Connection &lt;PnPConnection&gt;]
  [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
@@ -113,7 +113,24 @@
 <pre><code class="lang-powershell">Add-PnPPage -Name &quot;NewPage&quot; -HeaderLayoutType ColorBlock
 </code></pre>
 <p>Creates a new page named 'NewPage' using the ColorBlock header layout</p>
+<h3 id="example-6">EXAMPLE 6</h3>
+<pre><code class="lang-powershell">Add-PnPPage -Name &quot;NewPage&quot; Article -ScheduledPublishDate (Get-Date).AddHours(1)
+</code></pre>
+<p>Creates a new page named 'NewPage' using the article layout and schedule it to be published in 1 hour from now</p>
 <h2 id="parameters">PARAMETERS</h2>
+<h3 id="-connection">-Connection</h3>
+<p>Optional connection to be used by the cmdlet.
+Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
+<pre><code class="lang-yaml">Type: PnPConnection
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-commentsenabled">-CommentsEnabled</h3>
 <p>Enables or Disables the comments on the page</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
@@ -125,7 +142,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-connection">-Connection</h3>
+<h3 id="-connection-1">-Connection</h3>
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
 <pre><code class="lang-yaml">Type: PnPConnection
 Parameter Sets: (All)
@@ -197,6 +214,17 @@ Accept wildcard characters: False
 <h3 id="-publish">-Publish</h3>
 <p>Publishes the page once it is saved. Applicable to libraries set to create major and minor versions.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-scheduledpublishdate">-ScheduledPublishDate</h3>
+<p>If provided, the page will be scheduled to be published on the provided date and time. It will enable page scheduling on the Site Pages library if not already enabled. If not provided, the publishing of the page will not be scheduled.</p>
+<pre><code class="lang-yaml">Type: DateTime
 Parameter Sets: (All)
 
 Required: False
