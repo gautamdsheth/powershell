@@ -690,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPPage.html",
-          "hash": "Rq3lUTxrAEdbDq/+s+7xrA=="
+          "hash": "sl49eDFUgiflNMx2Lsn76w=="
         }
       },
       "is_incremental": false,
@@ -6702,7 +6702,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPPage.html",
-          "hash": "Y6Gv6a8prbYFhlEJKySQRg=="
+          "hash": "xKWipOI5ZQ+ajrzmBTzQfA=="
         }
       },
       "is_incremental": false,
@@ -7374,7 +7374,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Sync-PnPSharePointUserProfilesFromAzureActiveDirectory.html",
-          "hash": "9JcKYfwtEIeLgUXCjGx8Fw=="
+          "hash": "zg9HvdmCEzSbLPumMC8+Pw=="
         }
       },
       "is_incremental": false,

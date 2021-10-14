@@ -93,6 +93,7 @@
  [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Sets parameters of a page. All pages must be located inside the Site Pages library.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -LayoutType Home -Title &quot;My Page&quot;
@@ -107,9 +108,9 @@
 </code></pre>
 <p>Disables the comments on the page named 'MyPage'</p>
 <h3 id="example-4">EXAMPLE 4</h3>
-<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -HeaderType Default
+<pre><code class="lang-powershell">Set-PnPPage -Identity &quot;hr/MyPage&quot; -HeaderType Default
 </code></pre>
-<p>Sets the header of the page to the default header</p>
+<p>Sets the header of the page called MyPage located in the folder hr inside the Site Pages library to the default header</p>
 <h3 id="example-5">EXAMPLE 5</h3>
 <pre><code class="lang-powershell">Set-PnPPage -Identity &quot;MyPage&quot; -HeaderType None
 </code></pre>
@@ -181,7 +182,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-identity">-Identity</h3>
-<p>The name/identity of the page</p>
+<p>The name/identity of the page. This can be a page instance or the filename of the page. I.e. if the page is called MyPage.aspx and is located in the root of the Site Pages library, provide &quot;MyPage&quot; or &quot;MyPage.aspx&quot;. If the page is called MyOtherPage.aspx and is located inside a subfolder called HR located in the root of the Site Pages library, provide &quot;HR/MyOtherPage&quot; or &quot;HR/MyOtherPage.aspx&quot;.</p>
 <pre><code class="lang-yaml">Type: PagePipeBind
 Parameter Sets: (All)
 

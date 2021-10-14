@@ -84,7 +84,7 @@
                     <h1 id="add-pnppage">Add-PnPPage</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p>Adds a Page</p>
+<p>Allows creation of a new page</p>
 <h2 id="syntax">SYNTAX</h2>
 <pre><code class="lang-powershell">Add-PnPPage [-Name] &lt;String&gt; [-LayoutType &lt;PageLayoutType&gt;]
  [-PromoteAs &lt;PagePromoteType&gt;] [-ContentType &lt;ContentTypePipeBind&gt;] [-CommentsEnabled] [-Publish]
@@ -92,6 +92,7 @@
  [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Allows creation of a new page. The page will be located inside the Site Pages library of the cite currently connected to.</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Add-PnPPage -Name &quot;NewPage&quot;
@@ -189,7 +190,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-name">-Name</h3>
-<p>Specifies the name of the page.</p>
+<p>Specifies the name of the page. It will also be used to define the filename. I.e. if you provide MyPage, it will create a page MyPage.aspx inside the Site Pages library.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
 
