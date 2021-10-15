@@ -86,7 +86,7 @@
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Retrieves a Role Definitions of a site</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code>Get-PnPRoleDefinition [[-Identity] &lt;RoleDefinitionPipeBind&gt;] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+<pre><code class="lang-powershell">Get-PnPRoleDefinition [[-Identity] &lt;RoleDefinitionPipeBind&gt;] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
 <h2 id="examples">EXAMPLES</h2>
@@ -98,12 +98,15 @@
 <pre><code class="lang-powershell">Get-PnPRoleDefinition -Identity Read
 </code></pre>
 <p>Retrieves the specified Role Definition (Permission Level) settings of the current site</p>
+<h3 id="example-3">EXAMPLE 3</h3>
+<pre><code class="lang-powershell">Get-PnPRoleDefinition | Where-Object { $_.RoleTypeKind -eq &quot;Administrator&quot; }
+</code></pre>
+<p>Retrieves the Role Definition (Permission Level) settings with the Administrator type, regardless of its name</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-connection">-Connection</h3>
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
 <pre><code class="lang-yaml">Type: PnPConnection
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -115,7 +118,6 @@ Accept wildcard characters: False
 <p>The name of a role definition to retrieve.</p>
 <pre><code class="lang-yaml">Type: RoleDefinitionPipeBind
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: 0
@@ -124,7 +126,7 @@ Accept pipeline input: True (ByValue)
 Accept wildcard characters: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/sppnp">SharePoint Developer Patterns and Practices</a></p>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">

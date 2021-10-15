@@ -90,7 +90,11 @@
 </ul>
 <p>Submit up a new user profile bulk import job.</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code>New-PnPUPABulkImportJob [-Folder] &lt;String&gt; [-Path] &lt;String&gt; [-UserProfilePropertyMapping] &lt;Hashtable&gt;
+<pre><code class="lang-powershell">New-PnPUPABulkImportJob [-Folder] &lt;String&gt; [-Path] &lt;String&gt; [-UserProfilePropertyMapping] &lt;Hashtable&gt;
+ [-IdProperty] &lt;String&gt; [[-IdType] &lt;ImportProfilePropertiesUserIdType&gt;] [-Connection &lt;PnPConnection&gt;]
+ [&lt;CommonParameters&gt;]
+</code></pre>
+<pre><code class="lang-powershell">New-PnPUPABulkImportJob -Url &lt;String&gt; [-UserProfilePropertyMapping] &lt;Hashtable&gt;
  [-IdProperty] &lt;String&gt; [[-IdType] &lt;ImportProfilePropertiesUserIdType&gt;] [-Connection &lt;PnPConnection&gt;]
  [&lt;CommonParameters&gt;]
 </code></pre>
@@ -115,13 +119,16 @@
 
 New-PnPUPABulkImportJob -Folder &quot;Shared Documents&quot; -Path profiles.json -IdProperty &quot;IdName&quot; -UserProfilePropertyMapping @{&quot;Department&quot;=&quot;Department&quot;}
 </code></pre>
-<p>This will submit a new user profile bulk import job to SharePoint Online.</p>
+<p>This will submit a new user profile bulk import job to SharePoint Online using a local file.</p>
+<h3 id="example-2">EXAMPLE 2</h3>
+<pre><code class="lang-powershell">New-PnPUPABulkImportJob -Url &quot;https://{tenant}.sharepoint.com/Shared Documents/profiles.json&quot; -IdProperty &quot;IdName&quot; -UserProfilePropertyMapping @{&quot;Department&quot;=&quot;Department&quot;}
+</code></pre>
+<p>This will submit a new user profile bulk import job to SharePoint Online using an already uploaded file.</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-connection">-Connection</h3>
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
 <pre><code class="lang-yaml">Type: PnPConnection
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -132,8 +139,7 @@ Accept wildcard characters: False
 <h3 id="-folder">-Folder</h3>
 <p>Site or server relative URL of the folder to where you want to store the import job file.</p>
 <pre><code class="lang-yaml">Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Submit up a new user profile bulk import job from local file
 
 Required: True
 Position: 0
@@ -145,7 +151,6 @@ Accept wildcard characters: False
 <p>The name of the identifying property in your file.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
-Aliases:
 
 Required: True
 Position: 3
@@ -157,23 +162,32 @@ Accept wildcard characters: False
 <p>The type of profile identifier (Email/CloudId/PrincipalName). Defaults to Email.</p>
 <pre><code class="lang-yaml">Type: ImportProfilePropertiesUserIdType
 Parameter Sets: (All)
-Aliases:
 Accepted values: Email, CloudId, PrincipalName
 
 Required: False
 Position: 4
-Default value: None
+Default value: Email
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-path">-Path</h3>
 <p>The local file path.</p>
 <pre><code class="lang-yaml">Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: Submit up a new user profile bulk import job from local file
 
 Required: True
 Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-url">-Url</h3>
+<p>The url of the file saved in SharePoint.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: Submit up a new user profile bulk import job job from url
+
+Required: True
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -182,7 +196,6 @@ Accept wildcard characters: False
 <p>Specify user profile property mapping between the import file and UPA property names.</p>
 <pre><code class="lang-yaml">Type: Hashtable
 Parameter Sets: (All)
-Aliases:
 
 Required: True
 Position: 2
@@ -191,7 +204,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/sppnp">SharePoint Developer Patterns and Practices</a></p>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">

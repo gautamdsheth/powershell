@@ -90,6 +90,7 @@
                        [-Method &lt;HttpRequestMethod&gt;]
                        [-Content &lt;Object&gt;]
                        [-ContentType &lt;String&gt;]
+                       [-Raw]
                        [-Connection &lt;PnPConnection&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
@@ -156,6 +157,15 @@ Required: True
 Position: 0
 Accept pipeline input: False
 </code></pre>
+<h3 id="-raw">-Raw</h3>
+<p>If specified the returned data will not be converted to an object but returned as a JSON string.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: (All)
+
+Required: True
+Position: 0
+Accept pipeline input: False
+</code></pre>
 <h3 id="-connection">-Connection</h3>
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
 <pre><code class="lang-yaml">Type: PnPConnection
@@ -166,7 +176,7 @@ Position: Named
 Accept pipeline input: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/sppnp">SharePoint Developer Patterns and Practices</a></p>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">

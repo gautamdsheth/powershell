@@ -86,7 +86,7 @@
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Return registered eventreceivers</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code>Get-PnPEventReceiver [-List &lt;ListPipeBind&gt;] [-Identity &lt;EventReceiverPipeBind&gt;] [-Web &lt;WebPipeBind&gt;]
+<pre><code class="lang-powershell">Get-PnPEventReceiver [-List &lt;ListPipeBind&gt;] [-Scope &lt;EventReceiverScope&gt;] [-Identity &lt;EventReceiverPipeBind&gt;] 
  [-Connection &lt;PnPConnection&gt;] [-Includes &lt;String[]&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
@@ -116,12 +116,23 @@
 <pre><code class="lang-powershell">Get-PnPEventReceiver -List &quot;ProjectList&quot; -Identity MyReceiver
 </code></pre>
 <p>This will return the event receiver in the &quot;ProjectList&quot; list with the provided ReceiverName &quot;MyReceiver&quot;</p>
+<h3 id="example-7">EXAMPLE 7</h3>
+<pre><code class="lang-powershell">Get-PnPEventReceiver -Scope Site
+</code></pre>
+<p>This will return all the event receivers defined on the current site collection</p>
+<h3 id="example-8">EXAMPLE 8</h3>
+<pre><code class="lang-powershell">Get-PnPEventReceiver -Scope Web
+</code></pre>
+<p>This will return all the event receivers defined on the current site</p>
+<h3 id="example-9">EXAMPLE 9</h3>
+<pre><code class="lang-powershell">Get-PnPEventReceiver -Scope All
+</code></pre>
+<p>This will return all the event receivers defined on the current site and web</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-connection">-Connection</h3>
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
 <pre><code class="lang-yaml">Type: PnPConnection
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -133,7 +144,6 @@ Accept wildcard characters: False
 <p>The Guid of the event receiver</p>
 <pre><code class="lang-yaml">Type: EventReceiverPipeBind
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -145,7 +155,6 @@ Accept wildcard characters: False
 <p>The list object from which to get the event receiver object</p>
 <pre><code class="lang-yaml">Type: ListPipeBind
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -153,20 +162,20 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-web">-Web</h3>
-<p>The web to apply the command to. Omit this parameter to use the current web.</p>
-<pre><code class="lang-yaml">Type: WebPipeBind
-Parameter Sets: (All)
-Aliases:
+<h3 id="-scope">-Scope</h3>
+<p>The scope of the EventReceivers to retrieve</p>
+<pre><code class="lang-yaml">Type: EventReceiverScope
+Parameter Sets: Scope
+Accepted values: Web, Site, All
 
 Required: False
 Position: Named
-Default value: None
+Default value: Web
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/sppnp">SharePoint Developer Patterns and Practices</a></p>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">

@@ -91,49 +91,72 @@
 <p>Updates settings of a site collection</p>
 <h2 id="syntax">SYNTAX</h2>
 <h3 id="set-properties">Set Properties</h3>
-<pre><code>Set-PnPTenantSite [-Url] &lt;String&gt; [-Title &lt;String&gt;] [-LocaleId &lt;UInt32&gt;] [-AllowSelfServiceUpgrade]
- [-Owners &lt;System.Collections.Generic.List`1[System.String]&gt;] [-DenyAddAndCustomizePages]
- [-SharingCapability &lt;SharingCapabilities&gt;] [-StorageMaximumLevel &lt;Int64&gt;] [-StorageWarningLevel &lt;Int64&gt;]
- [-DefaultLinkPermission &lt;SharingPermissionType&gt;] [-DefaultSharingLinkType &lt;SharingLinkType&gt;]
- [-SharingAllowedDomainList &lt;String&gt;] [-SharingBlockedDomainList &lt;String&gt;] [-BlockDownloadOfNonViewableFiles]
+<pre><code class="lang-powershell">Set-PnPTenantSite [-Identity] &lt;String&gt; [-Title &lt;String&gt;] [-LocaleId &lt;UInt32&gt;] [-AllowSelfServiceUpgrade]
+ [-Owners &lt;String[]&gt;] [-DenyAddAndCustomizePages]
+ [-SharingCapability &lt;SharingCapabilities&gt;] [-StorageQuota &lt;Int64&gt;] [-StorageQuotaWarningLevel &lt;Int64&gt;] [-StorageQuotaReset] [-BlockDownloadLinksFileType &lt;BlockDownloadLinksFileTypes&gt;]
+ [-ResourceQuota &lt;Double&gt;] [-ResourceQuotaWarningLevel &lt;Double&gt;] [-EnablePWA &lt;Boolean&gt;]
+ [-DefaultLinkPermission &lt;SharingPermissionType&gt;] [-DefaultSharingLinkType &lt;SharingLinkType&gt;] [-DefaultLinkToExistingAccess &lt;Boolean&gt;] [-ExternalUserExpirationInDays &lt;Int32&gt;]
+ [-SharingAllowedDomainList &lt;String&gt;] [-SharingBlockedDomainList &lt;String&gt;] [-ShowPeoplePickerSuggestionsForGuestUsers &lt;Boolean&gt;] [-AllowDownloadingOfNonWebViewableFiles]
+ [-LimitedAccessFileType &lt;SPOLimitedAccessFileType&gt;] [-AllowEditing &lt;Boolean&gt;]
  [-SharingDomainRestrictionMode &lt;SharingDomainRestrictionModes&gt;] [-CommentsOnSitePagesDisabled]
  [-DisableAppViews &lt;AppViewsPolicy&gt;] [-DisableCompanyWideSharingLinks &lt;CompanyWideSharingLinksPolicy&gt;]
- [-DisableFlows &lt;FlowsPolicy&gt;] [-AnonymousLinkExpirationInDays &lt;Int32&gt;]
+ [-DisableFlows &lt;FlowsPolicy&gt;] [-AnonymousLinkExpirationInDays &lt;Int32&gt;] [-SensitivityLabel &lt;String&gt;] [-RemoveLabel] [-AddInformationSegment &lt;Guid[]&gt;] [-RemoveInformationSegment &lt;Guid[]&gt;]
  [-OverrideTenantAnonymousLinkExpirationPolicy] [-Wait] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h3 id="set-lock-state">Set Lock State</h3>
-<pre><code>Set-PnPTenantSite [-Url] &lt;String&gt; [-LockState &lt;SiteLockState&gt;] [-Wait] [-Connection &lt;PnPConnection&gt;]
+<pre><code class="lang-powershell">Set-PnPTenantSite [-Identity] &lt;String&gt; [-LockState &lt;SiteLockState&gt;] [-Wait] [-Connection &lt;PnPConnection&gt;]
  [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
 <p>Allows settings of a site collection to be updated</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
-<pre><code class="lang-powershell">Set-PnPTenantSite -Url https://contoso.sharepoint.com -Title &quot;Contoso Website&quot; -Sharing Disabled
+<pre><code class="lang-powershell">Set-PnPTenantSite -Identity &quot;https://contoso.sharepoint.com&quot; -Title &quot;Contoso Website&quot; -SharingCapability Disabled
 </code></pre>
 <p>This will set the title of the site collection with the URL 'https://contoso.sharepoint.com' to 'Contoso Website' and disable sharing on this site collection.</p>
 <h3 id="example-2">EXAMPLE 2</h3>
-<pre><code class="lang-powershell">Set-PnPTenantSite -Url https://contoso.sharepoint.com -Title &quot;Contoso Website&quot; -StorageWarningLevel 8000 -StorageMaximumLevel 10000
+<pre><code class="lang-powershell">Set-PnPTenantSite -Identity &quot;https://contoso.sharepoint.com&quot; -Title &quot;Contoso Website&quot; -StorageWarningLevel 8000 -StorageMaximumLevel 10000
 </code></pre>
 <p>This will set the title of the site collection with the URL 'https://contoso.sharepoint.com' to 'Contoso Website', set the storage warning level to 8GB and set the storage maximum level to 10GB.</p>
 <h3 id="example-3">EXAMPLE 3</h3>
-<pre><code class="lang-powershell">Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -Owners &quot;user@contoso.onmicrosoft.com&quot;
+<pre><code class="lang-powershell">Set-PnPTenantSite -Identity &quot;https://contoso.sharepoint.com/sites/sales&quot; -Owners &quot;user@contoso.onmicrosoft.com&quot;
 </code></pre>
 <p>This will add user@contoso.onmicrosoft.com as an additional site collection owner at 'https://contoso.sharepoint.com/sites/sales'.</p>
 <h3 id="example-4">EXAMPLE 4</h3>
-<pre><code class="lang-powershell">Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -Owners @(&quot;user1@contoso.onmicrosoft.com&quot;, &quot;user2@contoso.onmicrosoft.com&quot;)
+<pre><code class="lang-powershell">Set-PnPTenantSite -Identity &quot;https://contoso.sharepoint.com/sites/sales&quot; -Owners @(&quot;user1@contoso.onmicrosoft.com&quot;, &quot;user2@contoso.onmicrosoft.com&quot;)
 </code></pre>
 <p>This will add user1@contoso.onmicrosoft.com and user2@contoso.onmicrosoft.com as additional site collection owners at 'https://contoso.sharepoint.com/sites/sales'.</p>
 <h3 id="example-5">EXAMPLE 5</h3>
-<pre><code class="lang-powershell">Set-PnPTenantSite -Url https://contoso.sharepoint.com/sites/sales -NoScriptSite:$false
+<pre><code class="lang-powershell">Set-PnPTenantSite -Identity &quot;https://contoso.sharepoint.com/sites/sales&quot; -DenyAddAndCustomizePages:$false
 </code></pre>
-<p>This will enable script support for the site 'https://contoso.sharepoint.com/sites/sales' if disabled.</p>
+<p>This will enable script support for the site 'https://contoso.sharepoint.com/sites/sales'</p>
 <h2 id="parameters">PARAMETERS</h2>
+<h3 id="-addinformationsegment">-AddInformationSegment</h3>
+<p>This parameter allows you to add a segment to a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read <a href="https://docs.microsoft.com/sharepoint/information-barriers">https://docs.microsoft.com/sharepoint/information-barriers</a> documentation to understand Information barriers in SharePoint Online.</p>
+<pre><code class="lang-yaml">Type: Guid[]
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-allowselfserviceupgrade">-AllowSelfServiceUpgrade</h3>
 <p>Specifies if the site administrator can upgrade the site collection</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
-Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-allowediting">-AllowEditing</h3>
+<p>Prevents users from editing Office files in the browser and copying and pasting Office file contents out of the browser window.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -142,10 +165,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-anonymouslinkexpirationindays">-AnonymousLinkExpirationInDays</h3>
-<p>{{ Fill AnonymousLinkExpirationInDays Description }}</p>
+<p>Specifies all anonymous/anyone links that have been created (or will be created) will expire after the set number of days. Only applies if OverrideTenantAnonymousLinkExpirationPolicy is set to true.</p>
+<p>To remove the expiration requirement, set the value to zero (0).</p>
 <pre><code class="lang-yaml">Type: Int32
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -153,12 +176,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-blockdownloadofnonviewablefiles">-BlockDownloadOfNonViewableFiles</h3>
+<h3 id="-allowdownloadofnonviewablefiles">-AllowDownloadOfNonViewableFiles</h3>
 <p>Specifies if non web viewable files can be downloaded.</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
-Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-blockdownloadlinksfiletype">-BlockDownloadLinksFileType</h3>
+<p>The valid values are:</p>
+<p>WebPreviewableFiles
+ServerRenderedFilesOnly</p>
+<p>Note: ServerRendered (Office Only) and WebPreviewable (All supported files).</p>
+<p>The site value is compared with the tenant level setting and the stricter one wins. For example, if the tenant is set to ServerRenderedFilesOnly then that will be used even if the site is set to WebPreviewableFiles.</p>
+<pre><code class="lang-yaml">Type: BlockDownloadLinksFileTypes
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -168,10 +204,8 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-commentsonsitepagesdisabled">-CommentsOnSitePagesDisabled</h3>
 <p>Specifies if comments on site pages are enabled</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -183,7 +217,6 @@ Accept wildcard characters: False
 <p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
 <pre><code class="lang-yaml">Type: PnPConnection
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -193,10 +226,8 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-defaultlinkpermission">-DefaultLinkPermission</h3>
 <p>Specifies the default link permission for the site collection. None - Respect the organization default link permission. View - Sets the default link permission for the site to &quot;view&quot; permissions. Edit - Sets the default link permission for the site to &quot;edit&quot; permissions</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SharingPermissionType
 Parameter Sets: Set Properties
-Aliases:
 Accepted values: None, View, Edit
 
 Required: False
@@ -207,10 +238,8 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-defaultsharinglinktype">-DefaultSharingLinkType</h3>
 <p>Specifies the default link type for the site collection. None - Respect the organization default sharing link type. AnonymousAccess - Sets the default sharing link for this site to an Anonymous Access or Anyone link. Internal - Sets the default sharing link for this site to the &quot;organization&quot; link or company shareable link. Direct - Sets the default sharing link for this site to the &quot;Specific people&quot; link</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SharingLinkType
 Parameter Sets: Set Properties
-Aliases:
 Accepted values: None, Direct, Internal, AnonymousAccess
 
 Required: False
@@ -219,8 +248,18 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
+<h3 id="-defaultlinktoexistingaccess">-DefaultLinkToExistingAccess</h3>
+<p>When set to $true, the DefaultSharingLinkType will be overriden and the default sharing link will be All People with Existing Access link (which does not modify permissions). When set to $false (the default), the default sharing link type is controlled by the DefaultSharingLinkType parameter</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h3 id="-denyaddandcustomizepages">-DenyAddAndCustomizePages</h3>
-<p>Determines whether the Add And Customize Pages right is denied on the site collection. For more information about permission levels, see User permissions and permission levels in SharePoint.</p>
+<p>Determines whether the Add And Customize Pages right is denied in the site collection. For more information about permission levels, see User permissions and permission levels in SharePoint.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
 Aliases: NoScriptSite
@@ -232,13 +271,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-disableappviews">-DisableAppViews</h3>
-<ul>
-<li></li>
-</ul>
-<p>Only applicable to: SharePoint Online</p>
+<p>Determines whether the App Views feature is disabled in the site collection.</p>
 <pre><code class="lang-yaml">Type: AppViewsPolicy
 Parameter Sets: Set Properties
-Aliases:
 Accepted values: Unknown, Disabled, NotDisabled
 
 Required: False
@@ -248,13 +283,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-disablecompanywidesharinglinks">-DisableCompanyWideSharingLinks</h3>
-<ul>
-<li></li>
-</ul>
-<p>Only applicable to: SharePoint Online</p>
+<p>Determines whether company-wide sharing links are disabled in collection.</p>
 <pre><code class="lang-yaml">Type: CompanyWideSharingLinksPolicy
 Parameter Sets: Set Properties
-Aliases:
 Accepted values: Unknown, Disabled, NotDisabled
 
 Required: False
@@ -264,15 +295,44 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-disableflows">-DisableFlows</h3>
-<ul>
-<li></li>
-</ul>
-<p>Only applicable to: SharePoint Online</p>
+<p>Determines whether flows are disabled in the site collection.</p>
 <pre><code class="lang-yaml">Type: FlowsPolicy
 Parameter Sets: Set Properties
-Aliases:
 Accepted values: Unknown, Disabled, NotDisabled
 
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-externaluserexpirationindays">-ExternalUserExpirationInDays</h3>
+<p>Specifies number of days the external users remain active on the site.</p>
+<pre><code class="lang-yaml">Type: Int32
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-enablepwa">-EnablePWA</h3>
+<p>Determines whether site can include Project Web App. For more information about Project Web App, see Plan SharePoint groups in Project Server.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-limitedaccessfiletype">-LimitedAccessFileType</h3>
+<p>The following parameters can be used with -ConditionalAccessPolicy AllowLimitedAccess for both the organization-wide setting and the site-level setting.</p>
+<p>OfficeOnlineFilesOnly: Allows users to preview only Office files in the browser. This option increases security but may be a barrier to user productivity.</p>
+<p>WebPreviewableFiles (default): Allows users to preview Office files and other file types (such as PDF files and images) in the browser. Note that the contents of file types other than Office files are handled in the browser. This option optimizes for user productivity but offers less security for files that aren't Office files.</p>
+<p>OtherFiles: Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security.</p>
+<pre><code class="lang-yaml">Type: SPOLimitedAccessFileType
+Parameter Sets: Set Properties
 Required: False
 Position: Named
 Default value: None
@@ -283,7 +343,6 @@ Accept wildcard characters: False
 <p>Specifies the language of this site collection. For more information, see Locale IDs supported by SharePoint at <a href="https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint">https://github.com/pnp/PnP-PowerShell/wiki/Supported-LCIDs-by-SharePoint</a>. To get the list of supported languages on a SharePoint environment use: (Get-PnPWeb -Includes RegionalSettings.InstalledLanguages).RegionalSettings.InstalledLanguages.</p>
 <pre><code class="lang-yaml">Type: UInt32
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -293,10 +352,8 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-lockstate">-LockState</h3>
 <p>Sets the lockstate of a site</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SiteLockState
 Parameter Sets: Set Lock State
-Aliases:
 Accepted values: Unlock, NoAccess, ReadOnly
 
 Required: False
@@ -306,10 +363,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-overridetenantanonymouslinkexpirationpolicy">-OverrideTenantAnonymousLinkExpirationPolicy</h3>
-<p>{{ Fill OverrideTenantAnonymousLinkExpirationPolicy Description }}</p>
+<p>Specifies whether to use company-wide or a site collection level anonymous links expiration policy. Set it to true to get advantage of AnonymousLinkExpirationInDays.</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -321,7 +377,28 @@ Accept wildcard characters: False
 <p>Specifies owner(s) to add as site collection administrators. They will be added as additional site collection administrators. Existing administrators will stay. Can be both users and groups.</p>
 <pre><code class="lang-yaml">Type: System.Collections.Generic.List`1[System.String]
 Parameter Sets: Set Properties
-Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-sensitivitylabel">-SensitivityLabel</h3>
+<p>Set the sensitivity label.</p>
+<pre><code class="lang-yaml">Type: String
+Parameter Sets: Set Properties
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-removelabel">-RemoveLabel</h3>
+<p>Remove the assigned sensitivity label of a site.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -330,11 +407,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-sharingalloweddomainlist">-SharingAllowedDomainList</h3>
-<p>Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, &quot;contoso.com fabrikam.com&quot;.</p>
-<p>Only applicable to: SharePoint Online</p>
+<p>Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, &quot;contoso.com fabrikam.com&quot;. Effective when SharingDomainRestrictionMode is set to AllowList.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -343,11 +418,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h3 id="-sharingblockeddomainlist">-SharingBlockedDomainList</h3>
-<p>Specifies a list of email domains that is blocked for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, &quot;contoso.com fabrikam.com&quot;.</p>
-<p>Only applicable to: SharePoint Online</p>
+<p>Specifies a list of email domains that is blocked for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, &quot;contoso.com fabrikam.com&quot;. Effective when SharingDomainRestrictionMode is set to BlockList.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -357,7 +430,6 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-sharingcapability">-SharingCapability</h3>
 <p>Specifies what the sharing capabilities are for the site. Possible values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SharingCapabilities
 Parameter Sets: Set Properties
 Aliases: Sharing
@@ -371,10 +443,8 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-sharingdomainrestrictionmode">-SharingDomainRestrictionMode</h3>
 <p>Specifies the external sharing mode for domains.</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SharingDomainRestrictionModes
 Parameter Sets: Set Properties
-Aliases:
 Accepted values: None, AllowList, BlockList
 
 Required: False
@@ -383,12 +453,62 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-storagemaximumlevel">-StorageMaximumLevel</h3>
+<h3 id="-showpeoplepickersuggestionsforguestusers">-ShowPeoplePickerSuggestionsForGuestUsers</h3>
+<p>To enable the option to search for existing guest users at Site Collection Level, set this parameter to $true.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-storagequota">-StorageQuota</h3>
 <p>Specifies the storage quota for this site collection in megabytes. This value must not exceed the company's available quota.</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: Int64
 Parameter Sets: Set Properties
-Aliases:
+Aliases: StorageMaximumLevel
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-storagequotawarninglevel">-StorageQuotaWarningLevel</h3>
+<p>Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageQuota parameter.</p>
+<pre><code class="lang-yaml">Type: Int64
+Parameter Sets: Set Properties
+Aliases: StorageQuotaMaximumLevel
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-storagequotareset">-StorageQuotaReset</h3>
+<p>Resets the OneDrive for Business storage quota to the tenant's new default storage space</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-removeinformationsegment">-RemoveInformationSegment</h3>
+<p>This parameter allows you to remove a segment from a SharePoint site. This parameter is only applicable for tenants who have enabled Microsoft 365 Information barriers capability. Please read <a href="https://docs.microsoft.com/sharepoint/information-barriers">https://docs.microsoft.com/sharepoint/information-barriers</a> documentation to understand Information barriers with SharePoint Online.</p>
+<pre><code class="lang-yaml">Type: Guid[]
+Parameter Sets: Set Properties
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-resourcequota">-ResourceQuota</h3>
+<p>Specifies the resource quota in megabytes of the site collection. The default value is 0.</p>
+<pre><code class="lang-yaml">Type: Double
+Parameter Sets: Set Properties
 
 Required: False
 Position: Named
@@ -396,12 +516,10 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-storagewarninglevel">-StorageWarningLevel</h3>
-<p>Specifies the warning level for the storage quota in megabytes. This value must not exceed the values set for the StorageMaximumLevel parameter</p>
-<p>Only applicable to: SharePoint Online</p>
-<pre><code class="lang-yaml">Type: Int64
+<h3 id="-resourcequotawarninglevel">-ResourceQuotaWarningLevel</h3>
+<p>Specifies the warning level in megabytes of the site collection to warn the site collection administrator that the site is approaching the resource quota.</p>
+<pre><code class="lang-yaml">Type: Double
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -413,7 +531,6 @@ Accept wildcard characters: False
 <p>Specifies the title of the site</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: Set Properties
-Aliases:
 
 Required: False
 Position: Named
@@ -421,12 +538,11 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-url">-Url</h3>
+<h3 id="-identity">-Identity</h3>
 <p>Specifies the URL of the site</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
-Aliases:
-
+Aliases: Url
 Required: True
 Position: 0
 Default value: None
@@ -435,10 +551,8 @@ Accept wildcard characters: False
 </code></pre>
 <h3 id="-wait">-Wait</h3>
 <p>Wait for the operation to complete</p>
-<p>Only applicable to: SharePoint Online</p>
 <pre><code class="lang-yaml">Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -447,7 +561,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
-<p><a href="https://aka.ms/sppnp">SharePoint Developer Patterns and Practices</a></p>
+<p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
           </div>
           <div class="hidden-sm col-md-2" role="complementary">
