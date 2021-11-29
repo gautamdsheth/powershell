@@ -104,7 +104,7 @@
 </code></pre>
 <p>Exports the term group with the specified name to the file 'output.xml' located in the root folder of the C: drive.</p>
 <h3 id="example-4">EXAMPLE 4</h3>
-<pre><code class="lang-powershell">$termgroup = Get-PnPTermGroup -GroupName Test
+<pre><code class="lang-powershell">$termgroup = Get-PnPTermGroup -Identity Test
 $termgroup | Export-PnPTermGroupToXml -Out c:\output.xml
 </code></pre>
 <p>Retrieves a termgroup and subsequently exports that term group to a the file named 'output.xml'</p>
