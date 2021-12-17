@@ -774,7 +774,7 @@ Accept wildcard characters: False
 <p>The valid values are:
 ExternalUserAndGuestSharing (default) - External user sharing (share by email) and guest link sharing are both enabled. Disabled - External user sharing (share by email) and guest link sharing are both disabled.
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.</p>
-<p>For more information about sharing, see Manage external sharing for your SharePoint online environment (<a href="https://docs.microsoft.com/en-us/sharepoint/turn-external-sharing-on-or-off">https://docs.microsoft.com/en-us/sharepoint/turn-external-sharing-on-or-off</a>).</p>
+<p>For more information about sharing, see Manage external sharing for your SharePoint online environment (<a href="https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off">https://docs.microsoft.com/sharepoint/turn-external-sharing-on-or-off</a>).</p>
 <pre><code class="lang-yaml">Type: SharingCapabilities
 Parameter Sets: (All)
 Accepted values: Disabled, ExternalUserSharingOnly, ExternalUserAndGuestSharing, ExistingExternalUserSharingOnly
@@ -1021,6 +1021,17 @@ Accept wildcard characters: False
 <pre><code class="lang-yaml">Type: Boolean
 Parameter Sets: (All)
 Aliases: DisableAddShortcutsToOneDrive
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-isfluidenabled">-IsFluidEnabled</h3>
+<p>Allows configuration on whether Fluid components are enabled or disabled in the tenant. If set to <code>$true</code>, then this feature will be enabled on all sites in the tenant. If set to <code>$false</code>, it will be disabled on all sites in the tenant.</p>
+<pre><code class="lang-yaml">Type: Boolean
+Parameter Sets: (All)
+
 Required: False
 Position: Named
 Default value: None
