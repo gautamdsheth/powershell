@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azurefunctions.html",
-          "hash": "kAbggBPdiFkrRQf4ZfZBkQ=="
+          "hash": "mUONSBYFYQXnH97MhmQ94A=="
         }
       },
       "is_incremental": false,
@@ -378,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPFileToSiteTemplate.html",
-          "hash": "3I5m4AUMyN/h7YJ+bFaDqQ=="
+          "hash": "Rt3BvBIkrQNtDMY2LMJE4w=="
         }
       },
       "is_incremental": false,
@@ -499,6 +499,18 @@
         ".html": {
           "relative_path": "cmdlets/Add-PnPListItem.html",
           "hash": "1QGiJQgNPc6WgWZ5PqyIYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPListItemComment.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPListItemComment.html",
+          "hash": "uQb4J6YOTcBeK8yHVB+KxQ=="
         }
       },
       "is_incremental": false,
@@ -1590,7 +1602,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPAccessToken.html",
-          "hash": "+BSpM7gOAs97Iqr0FCnXFg=="
+          "hash": "Z39QnoLsCS09Y5l8AciSSw=="
         }
       },
       "is_incremental": false,
@@ -2335,6 +2347,18 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPListItem.html",
           "hash": "IB8RmR6bp2jp1fzUZX3oiQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPListItemComment.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPListItemComment.html",
+          "hash": "P+yja79mFC6am9mJWBMZfw=="
         }
       },
       "is_incremental": false,
@@ -4874,6 +4898,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPListItemComments.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPListItemComments.html",
+          "hash": "sjOVZmZoGhmTOKmIB2/hAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPMicrosoft365Group.md",
       "output": {
         ".html": {
@@ -7146,7 +7182,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "zkrjKI9BAicfML3WjQl2/g=="
+          "hash": "UcTQXxAD5rK2yrwl8ywf2g=="
         }
       },
       "is_incremental": false,
@@ -7225,7 +7261,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 595,
+          "total_file_count": 598,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
