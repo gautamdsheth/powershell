@@ -3930,7 +3930,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Move-PnPFile.html",
-          "hash": "Aukpf8rZZc3faJcdIyzT3Q=="
+          "hash": "puQSv4Z9DcGN/Aik5R/Juw=="
         }
       },
       "is_incremental": false,
@@ -6258,7 +6258,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPListItemPermission.html",
-          "hash": "wiXSKJF1+M4Hdkz4NIiALg=="
+          "hash": "uIC+J9Am1CSoJOU1psvc+w=="
         }
       },
       "is_incremental": false,
