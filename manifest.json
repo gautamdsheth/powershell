@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azurefunctions.html",
-          "hash": "mUONSBYFYQXnH97MhmQ94A=="
+          "hash": "lM0fR249/7yiDr8hXkCNRQ=="
         }
       },
       "is_incremental": false,
@@ -61,12 +61,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/configuration.md",
       "output": {
         ".html": {
           "relative_path": "articles/configuration.html",
-          "hash": "+DKplcAvJZyb+8z4WLHlHw=="
+          "hash": "nU3Yt04THK8JN7BsXycuDg=="
         }
       },
       "is_incremental": false,
@@ -330,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPField.html",
-          "hash": "lhErJql1/HFwtpnlHNxhuA=="
+          "hash": "YcKoRfZP3+a8zNGNWDQftg=="
         }
       },
       "is_incremental": false,
@@ -618,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPPage.html",
-          "hash": "NhRg74iawczJ4VePoeEZYg=="
+          "hash": "PaHJOASOuSQArkYB2vnl/A=="
         }
       },
       "is_incremental": false,
@@ -1302,7 +1305,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Copy-PnPList.html",
-          "hash": "Yikw9x9N2g8MTOSYNMvW+A=="
+          "hash": "/dkkdgIrzpizPMh8g8+eyg=="
         }
       },
       "is_incremental": false,
@@ -1351,18 +1354,6 @@
         ".html": {
           "relative_path": "cmdlets/Disable-PnPPageScheduling.html",
           "hash": "CchZqw+6pZkOT3xrAqAS7A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Disable-PnPPowerShellTelemetry.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Disable-PnPPowerShellTelemetry.html",
-          "hash": "eS8Bt9EMNkPenDFrWBF0pA=="
         }
       },
       "is_incremental": false,
@@ -1459,18 +1450,6 @@
         ".html": {
           "relative_path": "cmdlets/Enable-PnPPageScheduling.html",
           "hash": "jB3oSwn1NOApPFbbIznQEg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Enable-PnPPowerShellTelemetry.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Enable-PnPPowerShellTelemetry.html",
-          "hash": "tKMm+vG+yeZrkgbE80DggQ=="
         }
       },
       "is_incremental": false,
@@ -1818,7 +1797,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPAzureADUser.html",
-          "hash": "oNPnOfbYAb21b0Og8bOtDg=="
+          "hash": "7cmVSaFN1q+decsOw7p80w=="
         }
       },
       "is_incremental": false,
@@ -2442,7 +2421,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPMicrosoft365GroupMember.html",
-          "hash": "aTDYRXQ0lLI8mGzjmOBQqQ=="
+          "hash": "sRy1z64h91cctoqIiTjMpA=="
         }
       },
       "is_incremental": false,
@@ -2455,6 +2434,30 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPMicrosoft365GroupOwner.html",
           "hash": "M9/ew0rRGeSu28Yq/nd5Ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupSettingTemplates.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupSettingTemplates.html",
+          "hash": "dC4IB6I4MRB7M84fGfrNGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupSettings.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupSettings.html",
+          "hash": "fN7ZIzroPrteDY1RIQZcGA=="
         }
       },
       "is_incremental": false,
@@ -2670,7 +2673,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPPowerShellTelemetryEnabled.html",
-          "hash": "nyWpYeGY7dI++tQ8o+sYhA=="
+          "hash": "Q1l/Y4XHHN2ECFDUhJCc1A=="
         }
       },
       "is_incremental": false,
@@ -3966,7 +3969,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Move-PnPFolder.html",
-          "hash": "C43vtj4fLptMbNeSCjJXXg=="
+          "hash": "5wPi5K52b1YhiNLs0vy5UA=="
         }
       },
       "is_incremental": false,
@@ -4118,6 +4121,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/New-PnPMicrosoft365GroupSettings.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/New-PnPMicrosoft365GroupSettings.html",
+          "hash": "i/by0ySeVxt+Ss03zUUwJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/New-PnPPersonalSite.md",
       "output": {
         ".html": {
@@ -4182,7 +4197,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/New-PnPSiteGroup.html",
-          "hash": "5lwFyWnzCBCG7al5nIJu+g=="
+          "hash": "6QXKX66MlGhSHOUt/KDeOA=="
         }
       },
       "is_incremental": false,
@@ -4230,7 +4245,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/New-PnPTeamsTeam.html",
-          "hash": "kgDEMdS8w5j5bxM32v+YHw=="
+          "hash": "xPv8bDaUZzUoCX653nESPQ=="
         }
       },
       "is_incremental": false,
@@ -4526,6 +4541,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPAdaptiveScopeProperty.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPAdaptiveScopeProperty.html",
+          "hash": "wdPB6+0l2UeJ6w3HD7oRjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPAlert.md",
       "output": {
         ".html": {
@@ -4782,7 +4809,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPFolder.html",
-          "hash": "wa0xMCa0lYOhd1rnbqx4MA=="
+          "hash": "MMU53tMAxrZvJFq5o1cLfQ=="
         }
       },
       "is_incremental": false,
@@ -4982,6 +5009,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPMicrosoft365GroupSettings.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPMicrosoft365GroupSettings.html",
+          "hash": "Hk4spknFui8hVuK33u8FJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Remove-PnPNavigationNode.md",
       "output": {
         ".html": {
@@ -5106,7 +5145,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPPropertyBagValue.html",
-          "hash": "o/zxLH7wNT/shPnWxydsDQ=="
+          "hash": "pr30wS/CgfX8C9pnTxPFJA=="
         }
       },
       "is_incremental": false,
@@ -5574,7 +5613,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Rename-PnPFolder.html",
-          "hash": "frX3Xvs2pu2f/JGnylWX+Q=="
+          "hash": "/12QI2fr8CH+WXiUsMq3kg=="
         }
       },
       "is_incremental": false,
@@ -5863,6 +5902,18 @@
         ".html": {
           "relative_path": "cmdlets/Send-PnPMail.html",
           "hash": "0p+AGfvXjWvfLR9eZRcZVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPAdaptiveScopeProperty.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPAdaptiveScopeProperty.html",
+          "hash": "h5/CeasNlJ49Zb0pre8KRQ=="
         }
       },
       "is_incremental": false,
@@ -6350,6 +6401,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPMicrosoft365GroupSettings.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPMicrosoft365GroupSettings.html",
+          "hash": "akiIfcHaESdpfeek1rfyKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPMinimalDownloadStrategy.md",
       "output": {
         ".html": {
@@ -6462,7 +6525,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPPropertyBagValue.html",
-          "hash": "0AH6apRafYtX605+QuXFGw=="
+          "hash": "FaAG57a6VlzbzX37/kzstg=="
         }
       },
       "is_incremental": false,
@@ -6762,7 +6825,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPTenant.html",
-          "hash": "zX4s5iVMuIlKD/BUx9pMtg=="
+          "hash": "IMjx6nCcIduJUuxXTBLFxg=="
         }
       },
       "is_incremental": false,
@@ -7202,6 +7265,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Update-PnPTeamsUser.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Update-PnPTeamsUser.html",
+          "hash": "iKAiCbNiTFOutz4F8/jmBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Update-PnPUserType.md",
       "output": {
         ".html": {
@@ -7218,7 +7293,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "3jWBh7vPKlkd1+4ORvGfPw=="
+          "hash": "HoJg2p9E5DHgzevB4kt0Dw=="
         }
       },
       "is_incremental": false,
@@ -7297,7 +7372,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 601,
+          "total_file_count": 607,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

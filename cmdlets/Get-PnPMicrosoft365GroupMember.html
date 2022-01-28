@@ -89,11 +89,12 @@
 <li>Microsoft Graph API : at least Group.Read.All</li>
 <li>Microsoft Graph API : Directory.Read.All</li>
 </ul>
-<p>Gets members of a particular Microsoft 365 Group (aka Unified Group).</p>
+<p>Returns the members of a particular Microsoft 365 Group</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code class="lang-powershell">Get-PnPMicrosoft365GroupMember -Identity &lt;Microsoft365GroupPipeBind&gt; [&lt;CommonParameters&gt;]
+<pre><code class="lang-powershell">Get-PnPMicrosoft365GroupMember -Identity &lt;Microsoft365GroupPipeBind&gt; [-UserType &lt;String&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
+<p>Returns the members of a particular Microsoft 365 Group</p>
 <h2 id="examples">EXAMPLES</h2>
 <h3 id="example-1">EXAMPLE 1</h3>
 <pre><code class="lang-powershell">Get-PnPMicrosoft365GroupMember -Identity $groupId
@@ -103,6 +104,10 @@
 <pre><code class="lang-powershell">Get-PnPMicrosoft365GroupMember -Identity $group
 </code></pre>
 <p>Retrieves all the members of a specific Microsoft 365 Group based on the group's object instance</p>
+<h3 id="example-3">EXAMPLE 3</h3>
+<pre><code class="lang-powershell">Get-PnPMicrosoft365GroupMember -Identity &quot;Sales&quot; | Where-Object UserType -eq Guest
+</code></pre>
+<p>Returns all the guest users of the Microsoft 365 Group named &quot;Sales&quot;</p>
 <h2 id="parameters">PARAMETERS</h2>
 <h3 id="-identity">-Identity</h3>
 <p>The Identity of the Microsoft 365 Group</p>
