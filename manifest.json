@@ -26,6 +26,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/azurecloudshell.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/azurecloudshell.html",
+          "hash": "sH3V07RDB5CeflKgAghCag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/azurefunctions.md",
       "output": {
         ".html": {
@@ -81,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/connecting.html",
-          "hash": "PWXkTkN/J5+FyA7RL+UGWQ=="
+          "hash": "k1kQPsc/CE3vTWKqrAM78A=="
         }
       },
       "is_incremental": false,
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "iRQKbcDvYXEVoqi9xyAoUg=="
+          "hash": "H8hTywwbnjZ67tgDmc4R3g=="
         }
       },
       "is_incremental": false,
@@ -201,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPApplicationCustomizer.html",
-          "hash": "EvceO8IC4NeyrA71TGs6oA=="
+          "hash": "hhEUjbmsbcItNu4kAazhWg=="
         }
       },
       "is_incremental": false,
@@ -2229,7 +2241,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPHubSiteChild.html",
-          "hash": "xC3eRlSKFJwMn2DPe97OZw=="
+          "hash": "rZb6NC8xXZFRmNWNKBwxXw=="
         }
       },
       "is_incremental": false,
@@ -2482,54 +2494,6 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPNavigationNode.html",
           "hash": "BzysWby52gcaBwgnXXZarw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPOffice365CurrentServiceStatus.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPOffice365CurrentServiceStatus.html",
-          "hash": "BJ6UFscztWl6zXfuCIf3oQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPOffice365HistoricalServiceStatus.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPOffice365HistoricalServiceStatus.html",
-          "hash": "vqB2+pWn6+6wyeVO7MPJQw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPOffice365ServiceMessage.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPOffice365ServiceMessage.html",
-          "hash": "GozOxvOwppWsUQyd4vY3yw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPOffice365Services.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPOffice365Services.html",
-          "hash": "c3afbS4sE84Jg8VE0LbqoA=="
         }
       },
       "is_incremental": false,
@@ -5645,6 +5609,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Rename-PnPTenantSite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Rename-PnPTenantSite.html",
+          "hash": "uqNCnjD1nU7I5wvVSWhA0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Repair-PnPSite.md",
       "output": {
         ".html": {
@@ -7329,7 +7305,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "ulPNBZdHJNWYCg8RcL0JWA=="
+          "hash": "WRSA8NTC6OnSbmVHnowknQ=="
         }
       },
       "is_incremental": false,
@@ -7353,6 +7329,94 @@
       "output": {
         "resource": {
           "relative_path": "images/PnP_PowerShell_Roadmap.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/devicelogin.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/devicelogin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/deviceloginconnected.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/deviceloginconnected.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/deviceloginentercode.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/deviceloginentercode.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/installmodule.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/installmodule.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/launchcloudshellfromazureportal.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/launchcloudshellfromazureportal.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/launchcloudshellfromm365admin.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/launchcloudshellfromm365admin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/launchcloudshellfromteamsadmin.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/launchcloudshellfromteamsadmin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurecloudshell/launchingthroughbrowser.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurecloudshell/launchingthroughbrowser.png"
         }
       },
       "is_incremental": false,
@@ -7408,7 +7472,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 610,
+          "total_file_count": 608,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
