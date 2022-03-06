@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/azurefunctions.html",
-          "hash": "iycrmn2O5VbcJjgpbieX0w=="
+          "hash": "QCbWZ951KZqjcJWXz6O1Ww=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPContentType.html",
-          "hash": "G6gvx/3H5z82xVufj6slag=="
+          "hash": "7CckLTJE/EXreACW2atDdg=="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPEventReceiver.html",
-          "hash": "ODn0rkdR4b1ifCkXIJIVpA=="
+          "hash": "Jr1xLLjgOBEdOFQCz1YU5g=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPOrgAssetsLibrary.html",
-          "hash": "RDfqNG7IToFO1YdGAPS15w=="
+          "hash": "CWf1cZsuJP6G/7mPzlmPiQ=="
         }
       },
       "is_incremental": false,
@@ -2061,7 +2061,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPFile.html",
-          "hash": "pXlRqnqFRSiwDLwFL42/FA=="
+          "hash": "LDSOteT0db9iGx36lfSxXg=="
         }
       },
       "is_incremental": false,
@@ -3009,7 +3009,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPSiteTemplate.html",
-          "hash": "8dAIzhb7u5iHk3igoxLaEQ=="
+          "hash": "ThjY5PTf9TT0Cgg4JYJGKw=="
         }
       },
       "is_incremental": false,
@@ -4449,7 +4449,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Read-PnPSiteTemplate.html",
-          "hash": "PgcWaAFpnOeG8ieCU85mMQ=="
+          "hash": "3MvxnxZvLwQT7y4KL0DSzw=="
         }
       },
       "is_incremental": false,
@@ -6141,7 +6141,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPFolderPermission.html",
-          "hash": "fbXxGqAccj/I7jn0f91Igw=="
+          "hash": "Tl9UL/apcii4WhD3cXArJw=="
         }
       },
       "is_incremental": false,
@@ -6389,6 +6389,78 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsArchived.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsArchived.html",
+          "hash": "jKIh39HYtOtd/+KuK4HPJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsFavorite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsFavorite.html",
+          "hash": "UpfFQ73QIT9hiUvsZ5QwFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsNotArchived.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsNotArchived.html",
+          "hash": "hr4NgzQhYD3tOZuOiB9atg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsNotFavorite.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsNotFavorite.html",
+          "hash": "o5fsnNqFgaL1Il/jxR6zhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsRead.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsRead.html",
+          "hash": "dBI5GHLcFflkdEytDSdCCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsUnread.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnPMessageCenterAnnouncementAsUnread.html",
+          "hash": "K/6P/PTzIgQtubbTXcvWcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Set-PnPMicrosoft365Group.md",
       "output": {
         ".html": {
@@ -6621,7 +6693,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPSiteGroup.html",
-          "hash": "GDMcdwAmiH4aYQ5mAzvxNg=="
+          "hash": "ADWTbLlM9s3i/NdZ6UCFVg=="
         }
       },
       "is_incremental": false,
@@ -7005,7 +7077,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPWebHeader.html",
-          "hash": "/QJgmfi7qW5irXJYPK3oFg=="
+          "hash": "AiRL2bzN6mvbEenhNI07Eg=="
         }
       },
       "is_incremental": false,
@@ -7113,7 +7185,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Sync-PnPSharePointUserProfilesFromAzureActiveDirectory.html",
-          "hash": "S67r+2fFcwspVQDWr3tNeQ=="
+          "hash": "jnAl5w8/2YKjPIUmd4Ae0w=="
         }
       },
       "is_incremental": false,
@@ -7305,7 +7377,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "WRSA8NTC6OnSbmVHnowknQ=="
+          "hash": "ARJQDppNAUkJiE9jg1iDBg=="
         }
       },
       "is_incremental": false,
@@ -7424,6 +7496,50 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/azurefunctions/addpnpposhtoappfilerequirements.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/addpnpposhtoappfilerequirements.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurefunctions/createfunctionappbasics.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/createfunctionappbasics.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurefunctions/createfunctionapphosting.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/createfunctionapphosting.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azurefunctions/disableazinprofile.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azurefunctions/disableazinprofile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo.svg",
       "output": {
         "resource": {
@@ -7439,7 +7555,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "QHknVWMlZPGrxWubESGXzg=="
+          "hash": "W10Kcckw66Ue3RQNewlrug=="
         }
       },
       "is_incremental": false,
@@ -7472,7 +7588,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 608,
+          "total_file_count": 614,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
