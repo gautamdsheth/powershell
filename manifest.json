@@ -1037,6 +1037,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Add-PnPVivaConnectionsDashboardACE.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Add-PnPVivaConnectionsDashboardACE.html",
+          "hash": "WiFEotixKElF16IVjew7IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Add-PnPWebPartToWebPartPage.md",
       "output": {
         ".html": {
@@ -1702,18 +1714,6 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPAuthenticationRealm.html",
           "hash": "kUBMtt11pWiQ9Zl2mb08rQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "cmdlets/Get-PnPAvailableClientSideComponents.md",
-      "output": {
-        ".html": {
-          "relative_path": "cmdlets/Get-PnPAvailableClientSideComponents.html",
-          "hash": "eQF36R9YhWQ844Hps6oR7g=="
         }
       },
       "is_incremental": false,
@@ -3653,6 +3653,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPVivaConnectionsDashboardACE.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPVivaConnectionsDashboardACE.html",
+          "hash": "UwyMUuVOi3zddcbihMas9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPWeb.md",
       "output": {
         ".html": {
@@ -5448,7 +5460,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Remove-PnPTeamsTeam.html",
-          "hash": "woTEUH8wJuYboL4iy5bpvA=="
+          "hash": "oYRzdT9Ap/Y0CinzzkgFFA=="
         }
       },
       "is_incremental": false,
@@ -5605,6 +5617,18 @@
         ".html": {
           "relative_path": "cmdlets/Remove-PnPView.html",
           "hash": "HKvYxJPkAKod1bL3+qFnUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Remove-PnPVivaConnectionsDashboardACE.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Remove-PnPVivaConnectionsDashboardACE.html",
+          "hash": "2rSC9AQTy03L4/i6HmDnwQ=="
         }
       },
       "is_incremental": false,
@@ -7456,12 +7480,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Update-PnPVivaConnectionsDashboardACE.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Update-PnPVivaConnectionsDashboardACE.html",
+          "hash": "x8gO+GYuN0VjniVcOwuN8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "cmdlets/toc.yml",
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "eRDHFlLSkYCLEFK/2uvOPw=="
+          "hash": "od9ygedh9UBcFmEJZ+6rsw=="
         }
       },
       "is_incremental": false,
@@ -7672,7 +7708,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 620,
+          "total_file_count": 623,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
