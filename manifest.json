@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPDataRowsToSiteTemplate.html",
-          "hash": "aUGHosFqxqiV+o+3AywCvg=="
+          "hash": "vbvAMIK5F1VMyuT9djo03g=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnPPage.html",
-          "hash": "fXpBCcispW7XGQK9rWP5Hg=="
+          "hash": "gkkmH+GFgo/uLWQCGlfInQ=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1101,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Add-PnpTeamsChannelUser.html",
-          "hash": "J72HOqdMKWIzf6a1rue0Jw=="
+          "hash": "EAaj8mpnv7mS33Mz8THB6Q=="
         }
       },
       "is_incremental": false,
@@ -3209,11 +3209,35 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTeamsChannelFilesFolder.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTeamsChannelFilesFolder.html",
+          "hash": "I4AoTwfLGF0cJZxZuHcO6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPTeamsChannelMessage.md",
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPTeamsChannelMessage.html",
-          "hash": "WEcnBF14ovoDcwcL4URgpw=="
+          "hash": "bh2wc2p5ga/dIMdULtW40A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPTeamsChannelMessageReply.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPTeamsChannelMessageReply.html",
+          "hash": "vciWWiz7KLWod8ORyAPFZw=="
         }
       },
       "is_incremental": false,
@@ -3465,7 +3489,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPTenantSite.html",
-          "hash": "B3uerXPAt15KszjQzOCL2Q=="
+          "hash": "EHl92hyxdC6pBUIKGzYTng=="
         }
       },
       "is_incremental": false,
@@ -4176,7 +4200,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/New-PnPMicrosoft365Group.html",
-          "hash": "A/jzDlHydgPfz/xNM7U7kw=="
+          "hash": "EZJVGmLmbsrT/BPH8bG2VA=="
         }
       },
       "is_incremental": false,
@@ -4236,7 +4260,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/New-PnPSite.html",
-          "hash": "nwIM7JIKiTjYk6Xbh4zqmQ=="
+          "hash": "ZC/34shEDF6lE1XxNaErkQ=="
         }
       },
       "is_incremental": false,
@@ -4308,7 +4332,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/New-PnPTeamsTeam.html",
-          "hash": "BNNngx8VvI2lqAcPpZ5unw=="
+          "hash": "EEMNLasSFMOhDksseTrWNg=="
         }
       },
       "is_incremental": false,
@@ -6585,7 +6609,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPMicrosoft365Group.html",
-          "hash": "FUkoSw8nRaRaruwSL3eNkg=="
+          "hash": "E6RZ1YN1ZrOLjtzarw7kVA=="
         }
       },
       "is_incremental": false,
@@ -7265,6 +7289,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Set-PnpTeamsChannelUser.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Set-PnpTeamsChannelUser.html",
+          "hash": "kwAKO5KmtSOcxx8KQ1RAyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Stop-PnPFlowRun.md",
       "output": {
         ".html": {
@@ -7521,7 +7557,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "uoAb6FVhKa+iElSIm6j3qg=="
+          "hash": "gmdcqnHgZzPPJ+nHFXjOjg=="
         }
       },
       "is_incremental": false,
@@ -7699,7 +7735,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "W10Kcckw66Ue3RQNewlrug=="
+          "hash": "59+YOH8fsX7FpLLP6CkvPA=="
         }
       },
       "is_incremental": false,
@@ -7732,7 +7768,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 625,
+          "total_file_count": 628,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
