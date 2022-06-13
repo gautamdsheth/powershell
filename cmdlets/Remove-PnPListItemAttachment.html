@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Set-PnPPlannerTask | PnP PowerShell </title>
+    <title>Remove-PnPListItemAttachment | PnP PowerShell </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Set-PnPPlannerTask | PnP PowerShell ">
+    <meta name="title" content="Remove-PnPListItemAttachment | PnP PowerShell ">
     <meta name="generator" content="docfx 2.51.0.0">
     <meta name="description" content="PnP PowerShell is an open source, community driven, PowerShell Module designed to work with Microsoft 365.">
     <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
@@ -81,89 +81,44 @@
                   <div class="contribution-panel mobile-hide pull-right">
                       <a href="https://github.com/pnp/powershell/blob/dev/documentation/#L1" title="Improve this Doc" class="improve-doc-lg"><i class="glyphicon glyphicon-pencil"></i></a>
                   </div>
-                    <h1 id="set-pnpplannertask">Set-PnPPlannerTask</h1>
+                    <h1 id="add-pnplistitemattachment">Add-PnPListItemAttachment</h1>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<p><strong>Required Permissions</strong></p>
-<ul>
-<li>Microsoft Graph API: Group.ReadWrite.All</li>
-</ul>
-<p>Updates an existing task</p>
+<p>Removes attachment from the specified list item in the SharePoint list</p>
 <h2 id="syntax">SYNTAX</h2>
-<pre><code>Set-PnPPlannerTask -TaskId &lt;String&gt; [-Title &lt;String&gt;] [-Bucket &lt;PlannerBucketPipeBind&gt;]
- [-PercentComplete &lt;Int32&gt;] [-DueDateTime &lt;DateTime&gt;] [-StartDateTime &lt;DateTime&gt;]
- [-AssignedTo &lt;String[]] [-Priority &lt;Int32&gt;] [-Description &lt;String&gt;]
- [&lt;CommonParameters&gt;]
+<h3 id="remove-attachment-from-list-item">Remove attachment from list item</h3>
+<pre><code class="lang-powershell">Remove-PnPListItemAttachment [-List] &lt;ListPipeBind&gt; [-Identity] &lt;ListItemPipeBind&gt; [-FileName &lt;String&gt;] [-Recycle &lt;SwitchParameter&gt;] [-Force &lt;SwitchParameter&gt;] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
+</code></pre>
+<h3 id="removes-all-attachments-file-from-list-item">Removes all attachments file from list item</h3>
+<pre><code class="lang-powershell">Remove-PnPListItemAttachment [-List] &lt;ListPipeBind&gt; [-Identity] &lt;ListItemPipeBind&gt; [-All &lt;SwitchParameter&gt;] [-Recycle &lt;SwitchParameter&gt;] [-Force &lt;SwitchParameter&gt;] [-Connection &lt;PnPConnection&gt;] [&lt;CommonParameters&gt;]
 </code></pre>
 <h2 id="description">DESCRIPTION</h2>
-<p>This cmdlets allows you to update an existing task in a Planner plan.</p>
 <h2 id="examples">EXAMPLES</h2>
-<h3 id="example-1">Example 1</h3>
-<pre><code class="lang-powershell">Set-PnPPlannerTask -TaskId RSNNbc4HM0e7jt-btAKtTZYAFAf0 -Title &quot;New Title&quot; -StartDateTime 2020-10-01
+<h3 id="example-1">EXAMPLE 1</h3>
+<pre><code class="lang-powershell">Remove-PnPListItemAttachment -List &quot;Demo List&quot; -Identity 1 -FileName test.txt
 </code></pre>
-<p>This updates the task with the specified id and sets the title to &quot;New Title&quot; and sets the start date to the first of October 2020.</p>
-<h3 id="example-2">Example 2</h3>
-<pre><code class="lang-powershell">Set-PnPPlannerTask -TaskId RSNNbc4HM0e7jt-btAKtTZYAFAf0 -Title &quot;New Title&quot; -Bucket &quot;To do&quot;
+<p>Permanently delete an attachment from the list item with Id &quot;1&quot; in the &quot;Demo List&quot; SharePoint list with file name as test.txt.</p>
+<h3 id="example-2">EXAMPLE 2</h3>
+<pre><code class="lang-powershell">Remove-PnPListItemAttachment -List &quot;Demo List&quot; -Identity 1 -FileName test.txt -Recycle
 </code></pre>
-<p>This updates the task with the specified id and moves to the bucket &quot;To do&quot;</p>
-<h3 id="example-3">Example 3</h3>
-<pre><code class="lang-powershell">Set-PnPPlannerTask -TaskId RSNNbc4HM0e7jt-btAKtTZYAFAf0 -AssignedTo &quot;user@contoso.com&quot;,&quot;manager@contoso.com&quot;
+<p>Removes an attachment from the list item with Id &quot;1&quot; in the &quot;Demo List&quot; SharePoint list with file name as test.txt and sends it to recycle bin.</p>
+<h3 id="example-3">EXAMPLE 3</h3>
+<pre><code class="lang-powershell">Remove-PnPListItemAttachment -List &quot;Demo List&quot; -Identity 1 -FileName test.txt -Recycle -Force
 </code></pre>
-<p>This updates the task with the specified id replaces the assigned users with the ones specified.</p>
+<p>Removes an attachment from the list item with Id &quot;1&quot; in the &quot;Demo List&quot; SharePoint list with file name as test.txt and sends it to recycle bin. It will not ask for confirmation from user.</p>
+<h3 id="example-4">EXAMPLE 4</h3>
+<pre><code class="lang-powershell">Remove-PnPListItemAttachment -List &quot;Demo List&quot; -Identity 1 -All -Recycle -Force
+</code></pre>
+<p>Removes all attachments from the list item with Id &quot;1&quot; in the &quot;Demo List&quot; SharePoint list and sends them to recycle bin. It will not ask for confirmation from user.</p>
+<h3 id="example-5">EXAMPLE 5</h3>
+<pre><code class="lang-powershell">Remove-PnPListItemAttachment -List &quot;Demo List&quot; -Identity 1 -All
+</code></pre>
+<p>Permanently deletes all attachments from the list item with Id &quot;1&quot; in the &quot;Demo List&quot; SharePoint list and sends them to recycle bin.</p>
 <h2 id="parameters">PARAMETERS</h2>
-<h3 id="-bucket">-Bucket</h3>
-<p>Specify the bucket name or ID to move the task to.</p>
-<pre><code class="lang-yaml">Type: PlannerBucketPipeBind
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-duedatetime">-DueDateTime</h3>
-<p>Specify the due date.</p>
-<pre><code class="lang-yaml">Type: DateTime
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-percentcomplete">-PercentComplete</h3>
-<p>Defines the percentage of completeness of the task.</p>
-<pre><code class="lang-yaml">Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-startdatetime">-StartDateTime</h3>
-<p>Defines the start date of the task.</p>
-<pre><code class="lang-yaml">Type: DateTime
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-taskid">-TaskId</h3>
-<p>The Id of the task to update.</p>
+<h3 id="-filename">-FileName</h3>
+<p>Specify name of the attachment to delete from list item. The filename is not case sensitive.</p>
 <pre><code class="lang-yaml">Type: String
-Parameter Sets: (All)
-Aliases:
+Parameter Sets: (Single)
 
 Required: True
 Position: Named
@@ -171,53 +126,32 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-title">-Title</h3>
-<p>Sets the new title of the task.</p>
+<h3 id="-all">-All</h3>
+<p>Specify if you want to delete or recycle all the list item attachments.</p>
+<pre><code class="lang-yaml">Type: SwitchParameter
+Parameter Sets: (Multiple)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-recycle">-Recycle</h3>
+<p>Specify if you want to send the attachment(s) to the recycle bin.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
-Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="-assignedto">-AssignedTo</h3>
-<p>Specify the email(s) of the user to assign the task to. Notice that this will replace existing assignments with the onces specified here.</p>
-<pre><code class="lang-yaml">Type: String[]
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-priority">-Priority</h3>
-<p>Sets the priority of the task. Value should be a number between 0 and 10.</p>
-<ul>
-<li>values 0 and 1 are interpreted as <em>Urgent</em></li>
-<li>values 2, 3 and 4 are interpreted as <em>Important</em></li>
-<li>values 5, 6 and 7 are interpreted as <em>Medium</em></li>
-<li>values 8, 9 and 10 are interpreted as <em>Low</em></li>
-</ul>
-<pre><code class="lang-yaml">Type: Int32
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-</code></pre>
-<h3 id="-description">-Description</h3>
-<p>Sets the description (notes) of the task.</p>
+<h3 id="-force">-Force</h3>
+<p>Specifying the Force parameter will skip the confirmation question.</p>
 <pre><code class="lang-yaml">Type: String
 Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -225,8 +159,39 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 </code></pre>
-<h3 id="commonparameters">CommonParameters</h3>
-<p>This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see <a href="http://go.microsoft.com/fwlink/?LinkID=113216">about_CommonParameters</a>.</p>
+<h3 id="-list">-List</h3>
+<p>The ID, Title or Url of the list. Note that when providing the name of the list, the list name is case-sensitive.</p>
+<pre><code class="lang-yaml">Type: ListPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: 0
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-identity">-Identity</h3>
+<p>The ID of the listitem, or actual ListItem object</p>
+<pre><code class="lang-yaml">Type: ListItemPipeBind
+Parameter Sets: (All)
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
+<h3 id="-connection">-Connection</h3>
+<p>Optional connection to be used by the cmdlet. Retrieve the value for this parameter by either specifying -ReturnConnection on Connect-PnPOnline or by executing Get-PnPConnection.</p>
+<pre><code class="lang-yaml">Type: PnPConnection
+Parameter Sets: (All)
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+</code></pre>
 <h2 id="related-links">RELATED LINKS</h2>
 <p><a href="https://aka.ms/m365pnp">Microsoft 365 Patterns and Practices</a></p>
 </article>
