@@ -2304,7 +2304,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Get-PnPHubSiteChild.html",
-          "hash": "rZb6NC8xXZFRmNWNKBwxXw=="
+          "hash": "eBIb5ZWPwEY8YtcqQyOfWw=="
         }
       },
       "is_incremental": false,
@@ -2528,6 +2528,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupEndpoint.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupEndpoint.html",
+          "hash": "RIMbg5zJ1YHSLEfG4YspgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupMember.md",
       "output": {
         ".html": {
@@ -2569,6 +2581,30 @@
         ".html": {
           "relative_path": "cmdlets/Get-PnPMicrosoft365GroupSettings.html",
           "hash": "2rtVv5c1MOamP/rpPeWoWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupTeam.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupTeam.html",
+          "hash": "2v6W+aeRiNpDnpRujovx7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "cmdlets/Get-PnPMicrosoft365GroupYammerCommunity.md",
+      "output": {
+        ".html": {
+          "relative_path": "cmdlets/Get-PnPMicrosoft365GroupYammerCommunity.html",
+          "hash": "BDokFc2rZE8AMqfh5qzsmQ=="
         }
       },
       "is_incremental": false,
@@ -7224,7 +7260,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/Set-PnPTermGroup.html",
-          "hash": "Nj9WN87FgJogpQhYcFW9bQ=="
+          "hash": "Bx6Xdl2mtAm+PLwmORtATw=="
         }
       },
       "is_incremental": false,
@@ -7656,7 +7692,7 @@
       "output": {
         ".html": {
           "relative_path": "cmdlets/toc.html",
-          "hash": "mZGQJnj5BXrUmPYyiTs1GA=="
+          "hash": "UmKBPcKS42XDCFSI6HpuLQ=="
         }
       },
       "is_incremental": false,
@@ -7878,7 +7914,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 636,
+          "total_file_count": 639,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
